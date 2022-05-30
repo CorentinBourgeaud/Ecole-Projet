@@ -9,13 +9,13 @@
     android:background="#2596be">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="400dp"
         android:layout_height="wrap_content"
-        android:layout_margin="5pt"
         android:layout_gravity="center"
+        android:layout_margin="5pt"
+        android:background="@drawable/border"
         android:text="Menu de sélection des matières !"
-        android:textSize="25dp"
-        android:background="@drawable/border"/>
+        android:textSize="25dp" />
 
     <TextView
         android:layout_width="match_parent"
@@ -24,7 +24,8 @@
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Mathématiques" />
+        android:text="Mathématiques"
+        android:onClick="changeMaths"/>
 
     <TextView
         android:layout_width="match_parent"

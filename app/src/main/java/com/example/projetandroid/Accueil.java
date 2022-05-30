@@ -14,5 +14,9 @@ public class Accueil extends AppCompatActivity {
         setContentView(R.layout.accueil);
     }
 
+    public void changeMaths(View view) {
+        Intent intent = new Intent(this, MenuMaths.class);
+        startActivity(intent);
+    }
     
 }
