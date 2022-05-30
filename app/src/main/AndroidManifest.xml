@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjetAndroid">
         <activity
+            android:name=".MenuMaths"
+            android:exported="true" />
+        <activity
             android:name=".Connexion"
             android:exported="true">
             <intent-filter>
@@ -18,10 +21,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".Accueil"
+        <activity
+            android:name=".Accueil"
             android:exported="true" />
-
     </application>
 
 </manifest>
