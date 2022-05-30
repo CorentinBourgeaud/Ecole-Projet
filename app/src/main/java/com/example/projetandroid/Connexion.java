@@ -12,14 +12,14 @@ public class Connexion extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_connexion);
     }
 
     public void checkConnect(View view){
         EditText loginView = findViewById(R.id.conn_login);
-        String nom = loginView.getText().toString();
+        String login = loginView.getText().toString();
         Intent intent = new Intent(this, accueil.class);
-        intent.putExtra("nom", nom);
+        intent.putExtra("nom", login);
         startActivity(intent);
     }
 }

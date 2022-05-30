@@ -1,7 +1,9 @@
 package com.example.projetandroid;
 
+import android.content.Intent;
 import android.os.Bundle;
-
+import android.view.View;
+import android.widget.EditText;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class accueil extends AppCompatActivity {
