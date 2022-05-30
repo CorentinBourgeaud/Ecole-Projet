@@ -18,9 +18,11 @@ public class Connexion extends AppCompatActivity {
     public void checkConnect(View view){
         EditText loginView = findViewById(R.id.conn_login);
         String login = loginView.getText().toString();
-        Intent intent = new Intent(this, accueil.class);
-        intent.putExtra("nom", login);
+        Intent intent = new Intent(Connexion.this, Accueil.class);
+        //intent.putExtra("nom", login);
         startActivity(intent);
+
+
     }
 }
 
