@@ -19,7 +19,7 @@ public class Connexion extends AppCompatActivity {
         EditText loginView = findViewById(R.id.conn_login);
         String login = loginView.getText().toString();
         Intent intent = new Intent(Connexion.this, Accueil.class);
-        //intent.putExtra("nom", login);
+        intent.putExtra("nom", login);
         startActivity(intent);
 
 
