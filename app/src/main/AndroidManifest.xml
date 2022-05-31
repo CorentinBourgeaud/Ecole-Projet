@@ -13,6 +13,15 @@
             android:name=".MenuMaths"
             android:exported="true" />
         <activity
+            android:name=".MenuGeographie"
+            android:exported="true" />
+        <activity
+            android:name=".MenuAnglais"
+            android:exported="true" />
+
+
+        <activity
+
             android:name=".Connexion"
             android:exported="true">
             <intent-filter>

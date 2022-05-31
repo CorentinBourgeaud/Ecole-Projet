@@ -4,17 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:context=".MenuGeographie"
     android:orientation="vertical"
-    tools:context=".Accueil"
     android:background="#2596be">
 
     <TextView
-        android:layout_width="400dp"
+        android:layout_width="425dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_margin="5pt"
         android:background="@drawable/border"
-        android:text="Menu de sélection des matières !"
+        android:text="Menu de sélection Geographie !"
         android:textSize="25dp" />
 
     <TextView
@@ -24,8 +24,7 @@
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Mathématiques"
-        android:onClick="changeMaths"/>
+        android:text="3 images -> 1 pays" />
 
     <TextView
         android:layout_width="match_parent"
@@ -35,45 +34,18 @@
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Géographie"
-        android:onClick="changeGeographie"/>
-
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="30dp" />
-
-    <Button
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Anglais"
-        android:onClick="changeAnglais"/>
+        android:text="1 image -> 1 pays" />
 
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="100dp"
-        android:layout_gravity="center"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Apprendre en s'amusant !!"
-        android:layout_gravity="center"
-        android:textSize="20dp"
-        android:textStyle="bold"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="100dp"
+        android:layout_height="300dp"
         android:layout_gravity="center"/>
 
     <Button
         android:layout_width="300dp"
         android:layout_height="75dp"
         android:layout_gravity="center"
-        android:id="@+id/profil"
-        android:text="Profil" />
+        android:onClick="retour"
+        android:text="Retour" />
 
 </LinearLayout>
-

@@ -23,5 +23,15 @@ public class Accueil extends AppCompatActivity {
         Intent intent = new Intent(this, MenuMaths.class);
         startActivity(intent);
     }
+
+    public void changeGeographie(View view) {
+        Intent intent = new Intent(this, MenuGeographie.class);
+        startActivity(intent);
+    }
+
+    public void changeAnglais(View view) {
+        Intent intent = new Intent(this, MenuAnglais.class);
+        startActivity(intent);
+    }
     
 }
