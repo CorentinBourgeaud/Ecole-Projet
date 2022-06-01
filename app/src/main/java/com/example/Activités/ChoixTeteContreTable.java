@@ -10,15 +10,16 @@ import android.widget.TextView;
 
 import com.example.projetandroid.R;
 
-public class TeteContreTable extends AppCompatActivity {
+public class ChoixTeteContreTable extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tete_contre_table);
+        setContentView(R.layout.activity_choix_tete_contre_table);
     }
 
     public void retour (View view){
         super.finish();
     }
+
 }

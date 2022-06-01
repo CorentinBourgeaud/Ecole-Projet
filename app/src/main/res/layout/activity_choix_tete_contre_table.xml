@@ -4,37 +4,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.Activités.TeteContreTable"
+    tools:context="com.example.Activités.ChoixTeteContreTable"
     android:orientation="vertical"
     android:background="#2596be">
 
     <TextView
-        android:layout_width="425dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Choisis ta table de multiplication"
+        android:gravity="center"
+        android:textSize="4mm"/>
+
+    <NumberPicker
+        android:id="@+id/exercice5_nbrPicker"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_margin="5pt"
-        android:background="@drawable/border"
-        android:text="Menu Tête Contre Table"
-        android:textSize="25dp" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="100dp" />
-    <Button
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Jouer !" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="30dp" />
+        />
 
     <Button
-        android:layout_width="250dp"
+        android:id="@+id/exercice5_valider"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Règles" />
+        android:text="Valider"
+        android:onClick="."
+        android:layout_gravity="center"/>
 
     <TextView
         android:layout_width="wrap_content"

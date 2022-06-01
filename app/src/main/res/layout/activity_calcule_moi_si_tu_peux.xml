@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.Activités.TeteContreTable"
+    tools:context="com.example.Activités.CalculeMoiSiTuPeux"
     android:orientation="vertical"
     android:background="#2596be">
 
@@ -14,7 +14,7 @@
         android:layout_gravity="center"
         android:layout_margin="5pt"
         android:background="@drawable/border"
-        android:text="Menu Tête Contre Table"
+        android:text="Menu Calcul Moi Si Tu Peux !"
         android:textSize="25dp" />
 
     <TextView
