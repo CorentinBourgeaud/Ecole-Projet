@@ -3,26 +3,26 @@
     package="com.example.projetandroid">
 
     <application
-        android:allowBackup="true"
+        android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjetAndroid">
         <activity
-            android:name=".MenuMaths"
+            android:name="com.example.Activités.MenuMaths"
             android:exported="true" />
         <activity
-            android:name=".MenuGeographie"
+            android:name="com.example.Activités.MenuGeographie"
             android:exported="true" />
         <activity
-            android:name=".MenuAnglais"
+            android:name="com.example.Activités.MenuAnglais"
             android:exported="true" />
 
 
         <activity
 
-            android:name=".Connexion"
+            android:name="com.example.Activités.Connexion"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -31,7 +31,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Accueil"
+            android:name="com.example.Activités.Accueil"
             android:exported="true" />
     </application>
 

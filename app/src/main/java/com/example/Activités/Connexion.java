@@ -1,4 +1,4 @@
-package com.example.projetandroid;
+package com.example.Activités;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+
+import com.example.projetandroid.R;
 
 public class Connexion extends AppCompatActivity {
 
