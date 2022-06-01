@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjetAndroid">
         <activity
+            android:name="com.example.Activités.TeteContreTable"
+            android:exported="true" />
+        <activity
             android:name="com.example.Activités.MenuMaths"
             android:exported="true" />
         <activity
@@ -21,9 +24,7 @@
         <activity
             android:name="com.example.Activités.TestUtilisateur"
             android:exported="true" />
-
         <activity
-
             android:name="com.example.Activités.Connexion"
             android:exported="true">
             <intent-filter>
