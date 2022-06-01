@@ -73,6 +73,7 @@
         android:layout_height="75dp"
         android:layout_gravity="center"
         android:id="@+id/profil"
+        android:onClick="changeProfil"
         android:text="Profil" />
 
 </LinearLayout>

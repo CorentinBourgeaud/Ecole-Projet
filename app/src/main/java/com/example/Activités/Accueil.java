@@ -35,5 +35,10 @@ public class Accueil extends AppCompatActivity {
         Intent intent = new Intent(this, MenuAnglais.class);
         startActivity(intent);
     }
+
+    public void changeProfil(View view) {
+        Intent intent = new Intent(this, TestUtilisateur.class);
+        startActivity(intent);
+    }
     
 }

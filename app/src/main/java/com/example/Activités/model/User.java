@@ -1,4 +1,4 @@
-package model;
+package com.example.Activités.model;
 
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
