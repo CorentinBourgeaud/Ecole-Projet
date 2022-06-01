@@ -14,13 +14,9 @@ public class User {
 
     private String login;
     private String password;
-    //private Date dateNaissance;
 
-    User(String login, String password/*Date dateNaissance*/){
-        this.login = login;
-        this.password = password;
-   //     this.dateNaissance = dateNaissance;
-    }
+    public User(){}
+
 
     public void setNumProfil(int numProfil) {
         this.numProfil = numProfil;
@@ -34,9 +30,15 @@ public class User {
     protected String getPassword(){
         return password;
     }
-    //protected Date getDateNaissance(){
-    //    return dateNaissance;
-    //}
+
+    public void setLogin(String login) {
+        this.login = login;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
 
 
 }
