@@ -18,7 +18,9 @@
         <activity
             android:name="com.example.Activités.MenuAnglais"
             android:exported="true" />
-
+        <activity
+            android:name="com.example.Activités.TestUtilisateur"
+            android:exported="true" />
 
         <activity
 

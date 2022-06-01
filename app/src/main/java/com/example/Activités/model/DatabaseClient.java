@@ -1,4 +1,4 @@
-package model;
+package com.example.Activités.model;
 
 import android.content.Context;
 import androidx.annotation.NonNull;
@@ -6,11 +6,13 @@ import androidx.room.Room;
 import androidx.room.RoomDatabase;
 import androidx.sqlite.db.SupportSQLiteDatabase;
 
+import model.AppDatabase;
+
 public class DatabaseClient {
 
 
     // Instance unique permettant de faire le lien avec la base de données
-    private static DatabaseClient instance;
+    private static model.DatabaseClient instance;
 
     // Objet représentant la base de données de votre application
     private AppDatabase appDatabase;
@@ -30,9 +32,9 @@ public class DatabaseClient {
 
     // Méthode statique
     // Retourne l'instance de l'objet DatabaseClient
-    public static synchronized DatabaseClient getInstance(Context context) {
+    public static synchronized model.DatabaseClient getInstance(Context context) {
         if (instance == null) {
-            instance = new DatabaseClient(context);
+            instance = new model.DatabaseClient(context);
         }
         return instance;
     }
