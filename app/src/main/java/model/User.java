@@ -1,15 +1,13 @@
 package model;
 
-import android.content.ContentValues;
-
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
 import java.sql.Date;
 
-@Entity(tableName = "Profil")
+@Entity(tableName = "User")
 
-public class Profil {
+public class User {
 
     @PrimaryKey(autoGenerate = true)
     private int numProfil;
@@ -18,7 +16,7 @@ public class Profil {
     private String password;
     private Date dateNaissance;
 
-    Profil(String login, String password, Date dateNaissance){
+    User(String login, String password, Date dateNaissance){
         this.login = login;
         this.password = password;
         this.dateNaissance = dateNaissance;
