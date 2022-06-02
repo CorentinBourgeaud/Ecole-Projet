@@ -9,6 +9,12 @@
     android:background="#2596be">>
 
 
+    <ListView
+        android:id="@+id/listUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true" />
 
     <TextView
         android:layout_width="match_parent"
@@ -49,7 +55,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="..........." />
+            android:text="" />
 
     </LinearLayout>
 
@@ -70,7 +76,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="........." />
+            android:text="" />
 
     </LinearLayout>
 
@@ -107,7 +113,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="..........." />
+            android:text="" />
 
     </LinearLayout>
 
@@ -128,7 +134,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="........." />
+            android:hint="" />
 
     </LinearLayout>
 

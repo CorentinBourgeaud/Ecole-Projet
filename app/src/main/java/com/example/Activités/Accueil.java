@@ -37,8 +37,7 @@ public class Accueil extends AppCompatActivity {
     }
 
     public void changeProfil(View view) {
-        Intent intent = new Intent(this, TestUtilisateur.class);
-        startActivity(intent);
+
     }
     
 }
