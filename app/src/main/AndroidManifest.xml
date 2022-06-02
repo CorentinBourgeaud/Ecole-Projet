@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjetAndroid">
         <activity
+            android:name="com.example.Activités.ResultatTeteContreTable"
+            android:exported="true" />
+        <activity
             android:name="com.example.Activités.MultiplicationsTeteContreTable"
             android:exported="true" />
         <activity
