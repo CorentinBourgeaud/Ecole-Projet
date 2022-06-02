@@ -24,6 +24,11 @@ public class TeteContreTable extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void changeRegleTeteContreTable(View view) {
+        Intent intent = new Intent(this, RegleTeteContreTable.class);
+        startActivity(intent);
+    }
+
     public void retour (View view){
         super.finish();
     }

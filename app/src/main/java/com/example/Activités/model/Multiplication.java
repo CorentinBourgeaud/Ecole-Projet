@@ -1,8 +1,4 @@
-package model;
-
-/**
- * Created by fbm on 05/03/2018.
- */
+package com.example.Activités.model;
 
 public class Multiplication {
 

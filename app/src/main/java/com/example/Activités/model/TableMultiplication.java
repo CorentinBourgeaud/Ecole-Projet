@@ -1,10 +1,9 @@
-package model;
+package com.example.Activités.model;
 
 import java.util.ArrayList;
 
-/**
- * Created by fbm on 05/03/2018.
- */
+
+
 
 public class TableMultiplication {
 

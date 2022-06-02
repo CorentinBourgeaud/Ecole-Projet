@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.Activités.TeteContreTable"
+    tools:context="com.example.Activités.RegleTeteContreTable"
     android:orientation="vertical"
     android:background="#2596be">
 
@@ -14,34 +14,16 @@
         android:layout_gravity="center"
         android:layout_margin="5pt"
         android:background="@drawable/border"
-        android:text="Menu Tête Contre Table"
+        android:text="Règles Tête Contre Table"
         android:textSize="25dp" />
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="100dp" />
-    <Button
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Jouer !"
-        android:onClick="changeChoixTeteContreTable"/>
+        android:layout_height="580dp"
+        android:gravity="center"
+        android:text="@string/regle_tete_contre_table"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="30dp" />
 
-    <Button
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Règles"
-        android:onClick="changeRegleTeteContreTable"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="300dp"
-        android:layout_gravity="center"/>
 
     <Button
         android:layout_width="300dp"
