@@ -34,7 +34,7 @@
             android:name="com.example.Activités.MenuAnglais"
             android:exported="true" />
         <activity
-            android:name="com.example.Activités.TestUtilisateur"
+            android:name="com.example.Activités.MediaTest"
             android:exported="true" />
         <activity
             android:name="com.example.Activités.Connexion"
