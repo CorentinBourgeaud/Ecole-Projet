@@ -22,13 +22,16 @@ public class MultiplicationsTeteContreTable extends AppCompatActivity {
     // VIEW
     LinearLayout linear;
 
+    //Clé
+    public static final String TABLE_KEY = "table_key";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_multiplications_tete_contre_table);
 
         // 1. Initialiser les données
-        tableMultiplication = new TableMultiplication(8, 10);
+        tableMultiplication = new TableMultiplication(getIntent().getIntExtra(TABLE_KEY, 0), 10);
 
         // 2. Récupérer les éléments graphiques
         linear = findViewById(R.id.inflate_linear);
