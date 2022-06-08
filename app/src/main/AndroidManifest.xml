@@ -43,6 +43,9 @@
             android:name="com.example.Activités.GuessTheAnimal"
             android:exported="true" />
         <activity
+            android:name="com.example.Activités.RegleGuessTheAnimal"
+            android:exported="true" />
+        <activity
             android:name="com.example.Activités.Connexion"
             android:exported="true">
             <intent-filter>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.Activités.RegleGuessTheAnimal"
+    android:orientation="vertical"
+    android:background="#2596be">
+
+    <TextView
+        android:layout_width="425dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="5pt"
+        android:background="@drawable/border"
+        android:text="Rules - Guess the Animal"
+        android:textSize="25dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="580dp"
+        android:gravity="center"
+        android:text="@string/regle_tete_contre_table"/>
+
+
+
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="75dp"
+        android:layout_gravity="center"
+        android:onClick="retour"
+        android:text="Retour" />
+
+</LinearLayout>

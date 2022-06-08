@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -33,7 +34,6 @@ public class Connexion extends AppCompatActivity {
     private EditText editTextLogin;
     private EditText editTextMdp;
     private Button valider;
-
 
 
 
@@ -160,7 +160,7 @@ public class Connexion extends AppCompatActivity {
                 super.onPostExecute(user);
 
                 setResult(RESULT_OK);
-                Toast.makeText(getApplicationContext(), "Inscription sauvegardée.", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "Inscription sauvegardée.<", Toast.LENGTH_LONG).show();
 
             }
         }
@@ -168,5 +168,18 @@ public class Connexion extends AppCompatActivity {
         st.execute();
 
     }
+
+/*
+
+    listUser.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+            // Récupération de la tâche cliquée à l'aide de l'adapter
+            User user = adapter.getItem(position);
+
+            // Message
+            Toast.makeText(this, "Click : " + user.getLogin(), Toast.LENGTH_SHORT).show();
+        }
+    });*/
 }
 

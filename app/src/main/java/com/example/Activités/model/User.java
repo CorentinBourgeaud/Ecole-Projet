@@ -17,6 +17,9 @@ public class User {
 
     public User(){}
 
+    public User getUser(){
+        return this;
+    }
 
     public void setNumProfil(int numProfil) {
         this.numProfil = numProfil;
@@ -24,7 +27,7 @@ public class User {
 
     protected int getNumProfil() { return numProfil; }
 
-    protected String getLogin(){
+    public String getLogin(){
         return login;
     }
     protected String getPassword(){

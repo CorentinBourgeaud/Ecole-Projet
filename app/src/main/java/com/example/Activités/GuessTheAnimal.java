@@ -15,9 +15,9 @@ import java.util.Random;
 
 public class GuessTheAnimal extends AppCompatActivity {
     MediaPlayer player;
-    public static final int random = new Random().nextInt(6);
+    public int random;
     public static final ArrayList<Integer> listAnimals = new ArrayList<>();
-    //Arraylist de static final int avec tous les sons d'animaux dedans
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,10 +36,12 @@ public class GuessTheAnimal extends AppCompatActivity {
 
 
     public void play(View v){
+        random = new Random().nextInt(6);
         if(player == null){
             player = MediaPlayer.create(this, listAnimals.get(random));
         }
         player.start();
+
         player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             @Override
             public void onCompletion(MediaPlayer mp) {
