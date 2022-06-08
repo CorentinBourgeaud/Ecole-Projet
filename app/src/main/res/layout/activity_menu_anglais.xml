@@ -24,7 +24,8 @@
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Guess the animal!" />
+        android:text="Guess the animal!"
+        android:onClick="changeGuessAnimal"/>
 
     <TextView
         android:layout_width="match_parent"

@@ -9,8 +9,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.projetandroid.R;
 
+
 public class MediaTest extends AppCompatActivity {
     MediaPlayer player;
+
 
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -19,9 +21,15 @@ public class MediaTest extends AppCompatActivity {
 
     public void play(View v){
         if(player == null){
-            player = MediaPlayer.create(this, R.raw.song);
+            player = MediaPlayer.create(this, R.raw.dog);
         }
         player.start();
+        player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                stopPlayer();
+            }
+        });
     }
 
     public void pause(View v){
@@ -41,5 +49,7 @@ public class MediaTest extends AppCompatActivity {
             Toast.makeText(this, "Media player released", Toast.LENGTH_SHORT).show();
         }
     }
+
+
 
 }
