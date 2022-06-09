@@ -26,7 +26,7 @@ public class TroisImagesUnPays extends AppCompatActivity {
     public int flag2 = rand2.nextInt(28);
     public int flag3 = rand3.nextInt(28);
 
-    public int nbRound;
+    public int nbRound=0;
     public int roundWin;
     public int roundLose;
 
@@ -86,7 +86,8 @@ public class TroisImagesUnPays extends AppCompatActivity {
     }
 
     public void randomFlag(View v){
-        nbRound++;
+
+
         dejaJoue=false;
 
         flag2=flagCorrect;
@@ -102,6 +103,10 @@ public class TroisImagesUnPays extends AppCompatActivity {
             flag3 = rand3.nextInt(29);
         }
 
+        texte=findViewById(R.id.textPlay1);
+        texte.setText("Nombre de rounds joués : "+nbRound);
+        nbRound++;
+
         randChoix = rand.nextInt(3);
 
         btn1 = findViewById(R.id.btn01);
@@ -116,8 +121,7 @@ public class TroisImagesUnPays extends AppCompatActivity {
         texte.setText(listDrapeauStr.get(flagCorrect));
         texte=findViewById(R.id.consigne);
         texte.setVisibility(v.VISIBLE);
-        texte=findViewById(R.id.txtWin);
-        texte.setVisibility(v.INVISIBLE);
+
 
         img = findViewById(R.id.img1);
         img.setVisibility(v.VISIBLE);
@@ -209,13 +213,12 @@ public class TroisImagesUnPays extends AppCompatActivity {
         if (!dejaJoue) {
             roundWin++;
             dejaJoue=true;
-            texte=findViewById(R.id.textPlay1);
-            texte.setText("Nombre de rounds joués : "+nbRound);
             texte=findViewById(R.id.textWin1);
             texte.setText("Nombre de rounds gagnés : "+roundWin);
             texte=findViewById(R.id.txtWin);
             texte.setVisibility(v.VISIBLE);
             texte.setText("C'est gagné ! Bien joué.");
+            randomFlag(v);
         }
     }
 
@@ -223,13 +226,12 @@ public class TroisImagesUnPays extends AppCompatActivity {
         if(!dejaJoue) {
             roundLose++;
             dejaJoue=true;
-            texte=findViewById(R.id.textPlay1);
-            texte.setText("Nombre de rounds joués : "+nbRound);
             texte=findViewById(R.id.textLose1);
             texte.setText("Nombre de rounds perdus : "+roundLose);
             texte=findViewById(R.id.txtWin);
             texte.setVisibility(v.VISIBLE);
             texte.setText("C'est perdu... Dommage !");
+            randomFlag(v);
         }
     }
 

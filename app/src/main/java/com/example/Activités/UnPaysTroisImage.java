@@ -106,9 +106,14 @@ public class UnPaysTroisImage extends AppCompatActivity {
         btn3 = findViewById(R.id.btn003);
         btn3.setVisibility(v.VISIBLE);
 
+        texte=findViewById(R.id.textPlay01);
+        texte.setText("Nombre de rounds joués : "+nbRound);
 
         texte=findViewById(R.id.consigne);
         texte.setVisibility(v.VISIBLE);
+
+        texte=findViewById(R.id.txtWin1);
+        texte.setVisibility(v.INVISIBLE);
 
         img = findViewById(R.id.drapeau);
         img.setImageResource(listDrapeau.get(flagCorrect));
@@ -197,8 +202,7 @@ public class UnPaysTroisImage extends AppCompatActivity {
         if (!dejaJoue) {
             roundWin++;
             dejaJoue=true;
-            texte=findViewById(R.id.textPlay01);
-            texte.setText("Nombre de rounds joués : "+nbRound);
+
             texte=findViewById(R.id.textWin01);
             texte.setText("Nombre de rounds gagnés : "+roundWin);
             texte=findViewById(R.id.txtWin1);
@@ -211,8 +215,6 @@ public class UnPaysTroisImage extends AppCompatActivity {
         if(!dejaJoue) {
             roundLose++;
             dejaJoue=true;
-            texte=findViewById(R.id.textPlay01);
-            texte.setText("Nombre de rounds joués : "+nbRound);
             texte=findViewById(R.id.textLose01);
             texte.setText("Nombre de rounds perdus : "+roundLose);
             texte=findViewById(R.id.txtWin1);
