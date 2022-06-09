@@ -17,13 +17,12 @@
         android:text="Règles Tête Contre Table"
         android:textSize="25dp" />
 
+
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="580dp"
+        android:layout_height="502dp"
         android:gravity="center"
-        android:text="@string/regle_tete_contre_table"/>
-
-
+        android:text="@string/regle_tete_contre_table" />
 
     <Button
         android:layout_width="300dp"

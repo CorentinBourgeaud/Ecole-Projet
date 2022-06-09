@@ -27,7 +27,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Valider"
-        android:onClick="."
+        android:onClick="TCT_valider_choix"
         android:layout_gravity="center"/>
 
     <TextView

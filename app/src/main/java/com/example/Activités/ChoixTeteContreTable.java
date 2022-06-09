@@ -31,6 +31,8 @@ public class ChoixTeteContreTable extends AppCompatActivity {
 
         Intent intent = new Intent(this, MultiplicationsTeteContreTable.class);
         intent.putExtra(MultiplicationsTeteContreTable.TABLE_KEY, valeurnbrpicker);
+
+        startActivity(intent);
     }
 
     public void retour (View view){

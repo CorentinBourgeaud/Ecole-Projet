@@ -58,10 +58,36 @@ public class MultiplicationsTeteContreTable extends AppCompatActivity {
             // A FAIRE
             resultat.setHint("?");
             resultat.setInputType(2);
+            resultat.setId(multiplication.getOperande1());
 
             // 5. Ajout au linear principal
             linear.addView(linearTMP);
         }
 
+    }
+    public void TCT_valider_reponse(View view){
+
+        int bonne_reponse = 0;
+        int mauvaise_reponse = 0;
+
+        //récupère le chiffre de la table
+        int table = tableMultiplication.getNombre();
+
+        //vérifie chaque réponse
+        for (int i = 1 ; i < 10 ; i++){
+            EditText resultat = findViewById(i);
+            //passe la valeur de l'EditText en String puis la String en Int
+            int reponse = Integer.parseInt(resultat.getText().toString());
+
+            if(reponse == table * i){
+                bonne_reponse++;
+            }else{
+                mauvaise_reponse++;
+            }
+        }
+    }
+
+    public void retour (View view){
+        super.finish();
     }
 }
