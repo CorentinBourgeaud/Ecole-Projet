@@ -8,19 +8,20 @@
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.3687179487179487" />
         <entry key="app/src/main/res/layout/accueil.xml" value="0.67" />
         <entry key="app/src/main/res/layout/activity_calcule_moi_si_tu_peux.xml" value="0.15364583333333334" />
+        <entry key="app/src/main/res/layout/activity_choix_guess_the_animal.xml" value="0.19583333333333333" />
         <entry key="app/src/main/res/layout/activity_choix_tete_contre_table.xml" value="0.15364583333333334" />
+        <entry key="app/src/main/res/layout/activity_choix_trois_images_un_pays.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_connexion.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_guess_the_animal.xml" value="0.3220108695652174" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.3463541666666667" />
         <entry key="app/src/main/res/layout/activity_menu_anglais.xml" value="0.2265625" />
         <entry key="app/src/main/res/layout/activity_menu_geographie.xml" value="0.19947916666666668" />
         <entry key="app/src/main/res/layout/activity_menu_maths.xml" value="0.34057971014492755" />
-        <entry key="app/src/main/res/layout/activity_multiplications_tete_contre_table.xml" value="0.19375" />
         <entry key="app/src/main/res/layout/activity_regle_guess_the_animal.xml" value="0.16927083333333334" />
-        <entry key="app/src/main/res/layout/activity_regle_tete_contre_table.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/activity_resultat_tete_contre_table.xml" value="0.19375" />
+        <entry key="app/src/main/res/layout/activity_regle_tete_contre_table.xml" value="0.16927083333333334" />
         <entry key="app/src/main/res/layout/activity_test_utilisateur.xml" value="0.34601449275362317" />
-        <entry key="app/src/main/res/layout/activity_tete_contre_table.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_tete_contre_table.xml" value="0.15364583333333334" />
+        <entry key="app/src/main/res/layout/activity_une_image_trois_pays.xml" value="0.1" />
         <entry key="app/src/main/res/layout/media_player_test.xml" value="0.32518115942028986" />
         <entry key="app/src/main/res/layout/template_multiplication.xml" value="0.31302083333333336" />
         <entry key="app/src/main/res/layout/template_task.xml" value="0.34601449275362317" />

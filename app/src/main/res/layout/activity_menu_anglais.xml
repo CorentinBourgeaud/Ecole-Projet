@@ -14,7 +14,7 @@
         android:layout_gravity="center"
         android:layout_margin="5pt"
         android:background="@drawable/border"
-        android:text="Menu de sélection Geographie !"
+        android:text="Menu de sélection Anglais !"
         android:textSize="25dp" />
 
     <TextView

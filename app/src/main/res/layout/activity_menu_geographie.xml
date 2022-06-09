@@ -24,7 +24,8 @@
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="3 images -> 1 pays" />
+        android:text="3 images -> 1 pays"
+        android:onClick="changeTroisImagesUnPays"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -34,7 +35,8 @@
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="1 image -> 1 pays" />
+        android:text="1 image -> 1 pays"
+        android:onClick="changeUneImageUnPays"/>
 
     <TextView
         android:layout_width="wrap_content"
