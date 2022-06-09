@@ -70,6 +70,13 @@ public class MultiplicationsTeteContreTable extends AppCompatActivity {
         int bonne_reponse = 0;
         int mauvaise_reponse = 0;
 
+        //test verif recupération des erreurs dans un tableau
+        //int dix = 10;
+        //EditText lignedix = findViewById(dix);
+
+        TextView test = findViewById(R.id.test);
+        String text = test.getText().toString();
+
         //récupère le chiffre de la table
         int table = tableMultiplication.getNombre();
 
@@ -78,13 +85,17 @@ public class MultiplicationsTeteContreTable extends AppCompatActivity {
             EditText resultat = findViewById(i);
             //passe la valeur de l'EditText en String puis la String en Int
             int reponse = Integer.parseInt(resultat.getText().toString());
+            // pas de reponse fait crache le jeu
+            System.out.println("-> " + reponse);
 
             if(reponse == table * i){
                 bonne_reponse++;
             }else{
+                text = text + " " + i;
                 mauvaise_reponse++;
             }
         }
+        test.setText(text);
     }
 
     public void retour (View view){

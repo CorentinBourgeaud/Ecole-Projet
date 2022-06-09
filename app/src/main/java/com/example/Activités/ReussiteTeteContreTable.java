@@ -11,21 +11,21 @@ import android.widget.TextView;
 
 import com.example.projetandroid.R;
 
-public class ResultatTeteContreTable extends AppCompatActivity {
+public class ReussiteTeteContreTable extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_resultat_tete_contre_table);
+        setContentView(R.layout.activity_reussite_tete_contre_table);
+    }
+
+    public void changeAcceuil(View view) {
+        Intent intent = new Intent(this, Accueil.class);
+        startActivity(intent);
     }
 
     public void changeChoixTeteContreTable(View view) {
         Intent intent = new Intent(this, ChoixTeteContreTable.class);
-        startActivity(intent);
-    }
-
-    public void changeMaths(View view) {
-        Intent intent = new Intent(this, MenuMaths.class);
         startActivity(intent);
     }
 }

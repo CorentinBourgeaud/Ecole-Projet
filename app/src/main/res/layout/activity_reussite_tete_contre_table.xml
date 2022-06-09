@@ -5,14 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.Activités.ErreurTeteContreTable"
-    android:background="#2596be">
+    tools:context="com.example.Activités.ReussiteTeteContreTable">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/border"
-        android:text="Erreur(s) dans tes calcules !"
+        android:text="FÉLICITATION !!"
         android:textSize="40dp"
         android:gravity="center"
         android:layout_gravity="center" />
@@ -25,9 +24,9 @@
         android:layout_width="333dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:background="#4a235a "
+        android:background="#c8c8c8"
         android:gravity="center"
-        android:text="Nombre d'erreur"
+        android:text="Tout juste Champion !!"
         android:textColor="@color/black"
         android:textSize="20dp" />
 
@@ -39,8 +38,8 @@
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Corriger mes réponses"
-        android:onClick="."/>
+        android:text="Choisir une autre table"
+        android:onClick="changeChoixTeteContreTable"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -50,7 +49,7 @@
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Choisir une autre table"
-        android:onClick="changeChoixTeteContreTable"/>
+        android:text="Changer d'exercice"
+        android:onClick="changeAcceuil"/>
 
 </LinearLayout>

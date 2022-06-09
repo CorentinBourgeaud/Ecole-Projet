@@ -10,10 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjetAndroid">
         <activity
-            android:name="com.example.Activités.ErreurTeteContreTable"
+            android:name="com.example.Activités.ReussiteTeteContreTable"
             android:exported="true" />
         <activity
-            android:name="com.example.Activités.ResultatTeteContreTable"
+            android:name="com.example.Activités.ErreurTeteContreTable"
             android:exported="true" />
         <activity
             android:name="com.example.Activités.MultiplicationsTeteContreTable"
@@ -57,8 +57,6 @@
         <activity
             android:name="com.example.Activités.UnPaysTroisImage"
             android:exported="true" />
-
-
         <activity
             android:name="com.example.Activités.Connexion"
             android:exported="true">
