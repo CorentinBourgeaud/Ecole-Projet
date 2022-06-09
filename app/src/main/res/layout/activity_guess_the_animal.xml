@@ -8,92 +8,46 @@
     android:orientation="vertical"
     android:background="#2596be">
 
+    <TextView
+        android:layout_width="425dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="5pt"
+        android:background="@drawable/border"
+        android:text="Menu Guess The Animal"
+        android:textSize="25dp" />
 
     <TextView
         android:layout_width="match_parent"
+        android:layout_height="100dp" />
+    <Button
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:background="@drawable/border"
-        android:text="Guess the animal! Whose sound is that?"
-        android:textSize="20dp"
-        android:layout_gravity="center" />
+        android:layout_gravity="center"
+        android:text="Play!"
+        android:onClick="changeChoixGuessTheAnimal"/>
+
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="50dp" />
+        android:layout_width="match_parent"
+        android:layout_height="30dp" />
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:text="play"
-        android:onClick="play"
+        android:layout_gravity="center"
+        android:text="Rules"
+        android:onClick="changeRegleGuessTheAnimal"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
         android:layout_gravity="center"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"/>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <Button
-            android:layout_width="127dp"
-            android:layout_height="135dp"
-            android:layout_margin="5dp"
-            android:visibility="invisible"
-            android:id="@+id/btn1"
-
-            />
-
-        <Button
-            android:layout_width="127dp"
-            android:layout_height="135dp"
-            android:layout_margin="5dp"
-            android:visibility="invisible"
-            android:id="@+id/btn2"
-
-
-            />
-
-        <Button
-            android:layout_width="127dp"
-            android:layout_height="135dp"
-            android:layout_margin="5dp"
-            android:visibility="invisible"
-            android:id="@+id/btn3"
-            />
-
-    </LinearLayout>
-
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="150dp"
-        android:src="@drawable/dog"
-        android:visibility="invisible"
-        android:id="@+id/imgwin"/>
-
-    <TextView
-        android:id="@+id/textPlay"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Nombre de rounds joués : 0"/>
-    <TextView
-        android:id="@+id/textWin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Nombre de rounds gagnés : 0"/>
-    <TextView
-        android:id="@+id/textLose"
-        android:layout_width="match_parent"
-        android:layout_height="75dp"
-        android:text="Nombre de rounds perdus : 0"/>
-
     <Button
-        android:layout_width="376dp"
-        android:layout_height="91dp"
+        android:layout_width="300dp"
+        android:layout_height="75dp"
         android:layout_gravity="center"
         android:onClick="retour"
-        android:text="Retour" />
-
+        android:text="Back" />
 
 </LinearLayout>

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.Activités.TroisImagesUnPays"
+    android:orientation="vertical"
+    android:background="#2596be">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border"
+        android:text="3 Drapeau pour 1 pays"
+        android:textSize="20dp"
+        android:layout_gravity="center" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="randomFlag"
+        android:text="Jouer"
+        android:layout_gravity="center"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quel drapeau correspond à ce pays ?"
+        android:layout_gravity="center"
+        android:visibility="invisible"
+        android:textSize="15dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/consigne"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Autriche"
+        android:layout_gravity="center"
+        android:layout_margin="15dp"
+        android:visibility="invisible"
+        android:textSize="30dp"
+        android:id="@+id/nomPays"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="127dp"
+        android:layout_height="110dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:visibility="invisible"
+        android:src="@drawable/austria"
+        android:id="@+id/img1"
+        android:layout_gravity="center"/>
+    <ImageView
+        android:layout_width="127dp"
+        android:layout_height="110dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:visibility="invisible"
+        android:src="@drawable/austria"
+        android:id="@+id/img2"
+        android:layout_gravity="center"/>
+
+    <ImageView
+        android:layout_width="127dp"
+        android:layout_height="110dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:visibility="invisible"
+        android:src="@drawable/austria"
+        android:id="@+id/img3"
+        android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="127dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:visibility="invisible"
+            android:text="Choix 1"
+            android:id="@+id/btn01"
+            />
+        <Button
+            android:layout_width="127dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:visibility="invisible"
+            android:text="Choix 2"
+            android:id="@+id/btn02"
+            />
+        <Button
+            android:layout_width="127dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:visibility="invisible"
+            android:text="Choix 3"
+            android:id="@+id/btn03"
+            />
+
+
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="C'est gagné ! Bien joué."
+        android:visibility="invisible"
+        android:id="@+id/txtWin"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"/>
+
+    <TextView
+        android:id="@+id/textPlay1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nombre de rounds joués : 0"/>
+    <TextView
+        android:id="@+id/textWin1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nombre de rounds gagnés : 0"/>
+    <TextView
+        android:id="@+id/textLose1"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:text="Nombre de rounds perdus : 0"/>
+
+    <Button
+        android:layout_width="376dp"
+        android:layout_height="91dp"
+        android:layout_gravity="center"
+        android:onClick="retour"
+        android:text="Retour" />
+
+
+
+</LinearLayout>

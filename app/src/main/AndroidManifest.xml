@@ -40,11 +40,22 @@
             android:name="com.example.Activités.MediaTest"
             android:exported="true" />
         <activity
-            android:name="com.example.Activités.GuessTheAnimal"
+            android:name="com.example.Activités.ChoixGuessTheAnimal"
             android:exported="true" />
         <activity
             android:name="com.example.Activités.RegleGuessTheAnimal"
             android:exported="true" />
+        <activity
+            android:name="com.example.Activités.GuessTheAnimal"
+            android:exported="true" />
+        <activity
+            android:name="com.example.Activités.TroisImagesUnPays"
+            android:exported="true" />
+        <activity
+            android:name="com.example.Activités.UnPaysTroisImage"
+            android:exported="true" />
+
+
         <activity
             android:name="com.example.Activités.Connexion"
             android:exported="true">
