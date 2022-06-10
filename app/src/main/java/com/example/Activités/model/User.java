@@ -24,6 +24,8 @@ public class User implements Serializable {
     private int xpAnglais;
     @ColumnInfo
     private int xpMaths;
+    @ColumnInfo
+    private int avatar;
 
     public User(){}
 
@@ -40,7 +42,8 @@ public class User implements Serializable {
     public String getLogin(){
         return login;
     }
-    protected String getPrénom(){
+
+    public String getPrénom(){
         return prénom;
     }
 
@@ -82,5 +85,13 @@ public class User implements Serializable {
 
     public void setXpMaths(int xpMaths) {
         this.xpMaths = xpMaths;
+    }
+
+    public int getAvatar(){
+        return avatar;
+    }
+
+    public void setAvatar(int avatar){
+        this.avatar = avatar;
     }
 }

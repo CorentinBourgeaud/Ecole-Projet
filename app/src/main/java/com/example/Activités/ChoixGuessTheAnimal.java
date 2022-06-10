@@ -23,9 +23,9 @@ public class ChoixGuessTheAnimal extends AppCompatActivity {
     public int random3;
     public int randChoice;
 
-    public static final ArrayList<Integer> listAnimals = new ArrayList<>();
-    public static final ArrayList<String> listAnimalStr = new ArrayList<>();
-    public static final ArrayList<Integer> listPhotoAnimals = new ArrayList<>();
+    public static  ArrayList<Integer> listAnimals = new ArrayList<>();
+    public static  ArrayList<String> listAnimalStr = new ArrayList<>();
+    public static  ArrayList<Integer> listPhotoAnimals = new ArrayList<>();
 
     private int round = 0;
     private int roundWin = 0;
@@ -54,16 +54,9 @@ public class ChoixGuessTheAnimal extends AppCompatActivity {
         //user = (User) getIntent().getSerializableExtra("user");
         user = ((MyApplication) getApplication()).getUser();
 
-        listAnimals.add(R.raw.dog); listAnimalStr.add("dog"); listPhotoAnimals.add(R.drawable.dog);
-        listAnimals.add(R.raw.cat); listAnimalStr.add("cat"); listPhotoAnimals.add(R.drawable.cat);
-        listAnimals.add(R.raw.horse); listAnimalStr.add("horse"); listPhotoAnimals.add(R.drawable.horse);
-        listAnimals.add(R.raw.cow); listAnimalStr.add("cow"); listPhotoAnimals.add(R.drawable.cow);
-        listAnimals.add(R.raw.lion); listAnimalStr.add("lion"); listPhotoAnimals.add(R.drawable.lion);
-        listAnimals.add(R.raw.duck); listAnimalStr.add("duck"); listPhotoAnimals.add(R.drawable.duck);
-        listAnimals.add(R.raw.tiger); listAnimalStr.add("tiger"); listPhotoAnimals.add(R.drawable.tiger);
-        listAnimals.add(R.raw.frog); listAnimalStr.add("frog"); listPhotoAnimals.add(R.drawable.frog);
-        listAnimals.add(R.raw.pig); listAnimalStr.add("pig"); listPhotoAnimals.add(R.drawable.pig);
-        listAnimals.add(R.raw.coq); listAnimalStr.add("rooster"); listPhotoAnimals.add(R.drawable.rooster);
+        listAnimals = ((MyApplication) getApplication()).getListAnimals();
+        listAnimalStr = ((MyApplication) getApplication()).getListAnimalStr();
+        listPhotoAnimals = ((MyApplication) getApplication()).getListPhotoAnimals();
 
     }
 
@@ -76,29 +69,28 @@ public class ChoixGuessTheAnimal extends AppCompatActivity {
         img.setVisibility(v.INVISIBLE);
         textGame = findViewById(R.id.textGame);
         textGame.setVisibility(v.INVISIBLE);
-            random = new Random().nextInt(10);
-            random2 = random;
-            random3 = random;
-            if (player == null) {
-                player = MediaPlayer.create(this, listAnimals.get(random));
-            }
+        random = new Random().nextInt(10);
+        random2 = random;
+        random3 = random;
+        if (player == null) {
+            player = MediaPlayer.create(this, listAnimals.get(random));
+        }
+        btn1 = findViewById(R.id.btn1);
+        btn2 = findViewById(R.id.btn2);
+        btn3 = findViewById(R.id.btn3);
 
-            btn1 = findViewById(R.id.btn1);
-            btn2 = findViewById(R.id.btn2);
-            btn3 = findViewById(R.id.btn3);
+        while(random2==random || random3==random || random2 == random3) {
+            random3 = new Random().nextInt(10);
+            random2 = new Random().nextInt(10);
+        }
 
-            while(random2==random || random3==random || random2 == random3) {
-                random3 = new Random().nextInt(10);
-                random2 = new Random().nextInt(10);
-            }
+        randChoice = new Random().nextInt(3);
 
-            randChoice = new Random().nextInt(3);
+        btn1.setVisibility(v.VISIBLE);
+        btn2.setVisibility(v.VISIBLE);
+        btn3.setVisibility(v.VISIBLE);
 
-            btn1.setVisibility(v.VISIBLE);
-            btn2.setVisibility(v.VISIBLE);
-            btn3.setVisibility(v.VISIBLE);
-
-            if(randChoice==1){
+        if(randChoice==1){
                 btn1.setText(listAnimalStr.get(random));
                 btn1.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -121,7 +113,7 @@ public class ChoixGuessTheAnimal extends AppCompatActivity {
                     }
                 });
             }
-            else if(randChoice==2){
+        else if(randChoice==2){
                 btn1.setText(listAnimalStr.get(random2));
                 btn1.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -144,8 +136,7 @@ public class ChoixGuessTheAnimal extends AppCompatActivity {
                     }
                 });
             }
-
-            else{
+        else{
                 btn1.setText(listAnimalStr.get(random2));
                 btn1.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -172,13 +163,13 @@ public class ChoixGuessTheAnimal extends AppCompatActivity {
 
         player.start();
 
-            player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                @Override
-                public void onCompletion(MediaPlayer mp) {
+        player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mp) {
                     stopPlayer();
                 }
-            });
-            round++;
+        });
+        round++;
     }
 
     private void stopPlayer(){

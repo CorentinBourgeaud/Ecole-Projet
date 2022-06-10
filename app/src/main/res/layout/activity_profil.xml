@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.Activités.Profil"
+    android:background="#2596be">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Page de profil de "
+        android:textSize="25dp"
+        android:background="@drawable/border"
+        android:gravity="center"
+        android:id="@+id/titreProfil"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"/>
+
+
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login : "
+        android:textSize="30dp"
+        android:id="@+id/login"
+        />
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity=""
+            android:layout_row="1"
+            android:id="@+id/avatar"/>
+
+        <TextView
+            android:id="@+id/prenom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:text="Prénom : "
+            android:textSize="30dp" />
+
+    </GridLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Niveau général :"
+        android:id="@+id/nvGeneral"
+        android:textSize="20dp"
+/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Niveau en mathématiques : "
+        android:textSize="20dp"
+        android:id="@+id/nvMaths"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Niveau en Géographie : "
+        android:textSize="20dp"
+        android:id="@+id/nvGeo"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Niveau en Anglais : "
+        android:textSize="20dp"
+        android:id="@+id/nvAnglais"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"/>
+
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="75dp"
+        android:onClick="deconnexion"
+        android:layout_gravity="center"
+        android:text="Déconnexion" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        android:text="Changer l'avatar"
+        android:onClick="changeAvatar"
+        />
+
+
+</LinearLayout>

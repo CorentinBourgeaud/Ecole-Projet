@@ -53,7 +53,7 @@ public class Accueil extends AppCompatActivity {
     }
 
     public void changeProfil(View view) {
-        Intent intent = new Intent(this, MediaTest.class);
+        Intent intent = new Intent(this, Profil.class);
         //intent.putExtra("user", user);
         startActivity(intent);
     }

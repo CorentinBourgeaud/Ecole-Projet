@@ -41,7 +41,6 @@ public class Connexion extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_connexion);
 
-        listeAvatar.add(R.drawable.pikachu);
 
         mDb = DatabaseClient.getInstance(getApplicationContext());
 
@@ -149,10 +148,11 @@ public class Connexion extends AppCompatActivity {
                 User user = new User();
                 user.setLogin(sLogin);
                 user.setPrénom(sMdp);
-                user.setXp(0);
+                user.setXp(10);
                 user.setXpMaths(0);
                 user.setXpAnglais(0);
                 user.setXpGeo(0);
+                user.setAvatar(0);
 
                 // adding to database
                 mDb.getAppDatabase()

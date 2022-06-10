@@ -20,8 +20,8 @@ public class UnPaysTroisImage extends AppCompatActivity {
 
 
 
-    private static final ArrayList<Integer> listDrapeau = new ArrayList<>();
-    private static final ArrayList<String> listDrapeauStr = new ArrayList<>();
+    private static ArrayList<Integer> listDrapeau = new ArrayList<>();
+    private static ArrayList<String> listDrapeauStr = new ArrayList<>();
     public Random rand = new Random();
     public Random rand2 = new Random();
     public Random rand3 = new Random();
@@ -60,35 +60,9 @@ public class UnPaysTroisImage extends AppCompatActivity {
         user = ((MyApplication) getApplication()).getUser();
 
 
-        listDrapeau.add(R.drawable.austria); listDrapeauStr.add("Autriche");
-        listDrapeau.add(R.drawable.belgium); listDrapeauStr.add("Belgique");
-        listDrapeau.add(R.drawable.bulgaria); listDrapeauStr.add("Bulgarie");
-        listDrapeau.add(R.drawable.croatia); listDrapeauStr.add("Croatie");
-        listDrapeau.add(R.drawable.cyprus);listDrapeauStr.add("Chypre");
-        listDrapeau.add(R.drawable.czech);listDrapeauStr.add("République Tchèque");
-        listDrapeau.add(R.drawable.denmark);listDrapeauStr.add("Danemark");
-        listDrapeau.add(R.drawable.estonia);listDrapeauStr.add("Estonie");
-        listDrapeau.add(R.drawable.europe);listDrapeauStr.add("Union Européenne");
-        listDrapeau.add(R.drawable.finland);listDrapeauStr.add("Finlande");
-        listDrapeau.add(R.drawable.france);listDrapeauStr.add("France");
-        listDrapeau.add(R.drawable.germany);listDrapeauStr.add("Allemagne");
-        listDrapeau.add(R.drawable.greece);listDrapeauStr.add("Grèce");
-        listDrapeau.add(R.drawable.hungary);listDrapeauStr.add("Hongrie");
-        listDrapeau.add(R.drawable.ireland);listDrapeauStr.add("Irlande");
-        listDrapeau.add(R.drawable.italy);listDrapeauStr.add("Italie");
-        listDrapeau.add(R.drawable.latvia);listDrapeauStr.add("Lettonie");
-        listDrapeau.add(R.drawable.lithuania);listDrapeauStr.add("Lituanie");
-        listDrapeau.add(R.drawable.luxembourg);listDrapeauStr.add("Luxembourg");
-        listDrapeau.add(R.drawable.malta);listDrapeauStr.add("Malte");
-        listDrapeau.add(R.drawable.netherlands);listDrapeauStr.add("Pays Bas");
-        listDrapeau.add(R.drawable.poland);listDrapeauStr.add("Pologne");
-        listDrapeau.add(R.drawable.portugal);listDrapeauStr.add("Portugal");
-        listDrapeau.add(R.drawable.romania);listDrapeauStr.add("Roumanie");
-        listDrapeau.add(R.drawable.slovakia);listDrapeauStr.add("Slovaquie");
-        listDrapeau.add(R.drawable.slovenia);listDrapeauStr.add("Slovénie");
-        listDrapeau.add(R.drawable.spain);listDrapeauStr.add("Espagne");
-        listDrapeau.add(R.drawable.sweden);listDrapeauStr.add("Suède");
-        listDrapeau.add(R.drawable.uk);listDrapeauStr.add("Royaume Uni");
+        listDrapeau = ((MyApplication) getApplication()).getListDrapeau();
+        listDrapeauStr = ((MyApplication) getApplication()).getListDrapeauStr();
+
     }
 
     public void randomFlag(View v){

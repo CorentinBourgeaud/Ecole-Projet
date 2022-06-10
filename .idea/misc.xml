@@ -3,6 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/remym/AndroidStudioProjects/Ecole-Projet/app/src/main/res/layout/activity_menu_maths.xml" value="0.3625" />
+        <entry key="..\:/Users/remym/AndroidStudioProjects/Ecole-Projet/app/src/main/res/layout/activity_profil.xml" value="0.25" />
+        <entry key="..\:/Users/remym/AndroidStudioProjects/Ecole-Projet/app/src/main/res/layout/activity_regle_guess_the_animal.xml" value="0.3625" />
+        <entry key="..\:/Users/remym/AndroidStudioProjects/Ecole-Projet/app/src/main/res/layout/activity_tete_contre_table.xml" value="0.3625" />
+        <entry key="..\:/Users/remym/AndroidStudioProjects/Ecole-Projet/app/src/main/res/layout/activity_une_image_trois_pays.xml" value="0.3625" />
+        <entry key="..\:/Users/remym/AndroidStudioProjects/Ecole-Projet/app/src/main/res/layout/fragment_choix_avatar.xml" value="0.3625" />
+        <entry key="..\:/Users/remym/AndroidStudioProjects/Ecole-Projet/app/src/main/res/layout/media_player_test.xml" value="0.2798913043478261" />
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.3687179487179487" />
         <entry key="app/src/main/res/drawable/border.xml" value="0.3687179487179487" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.3687179487179487" />
