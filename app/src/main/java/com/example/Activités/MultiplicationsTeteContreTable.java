@@ -35,7 +35,10 @@ public class MultiplicationsTeteContreTable extends AppCompatActivity {
         //Récupérer les éléments graphiques
         linear = findViewById(R.id.inflate_linear);
 
-        if (getIntent().getIntegerArrayListExtra(VAL_ERREUR).isEmpty()) {
+        ArrayList test = getIntent().getIntegerArrayListExtra(VAL_ERREUR);
+        System.out.println(test);
+
+        if (getIntent().getIntegerArrayListExtra(VAL_ERREUR) == null) {
 
             // 1. Initialiser les données
             tableMultiplication = new TableMultiplication(getIntent().getIntExtra(TABLE_KEY, 0), 10);
@@ -77,7 +80,10 @@ public class MultiplicationsTeteContreTable extends AppCompatActivity {
     private void miseAJourUIBis() {
 
         // 1. Boucler pour générer la table
-        for (Multiplication multiplication : tableMultiplication.getMultiplications()) {
+        ArrayList<Integer> ListeCalcule = getIntent().getIntegerArrayListExtra(VAL_ERREUR);
+        for (int i = 0; i < ListeCalcule.size(); i++) {
+
+            Multiplication multiplication = new Multiplication(ListeCalcule.get(i)  ,  getIntent().getIntExtra(TABLE_KEY, 0));
 
             // 2. Création de la ligne temporaire
             LinearLayout linearTMP = (LinearLayout) getLayoutInflater().inflate(R.layout.template_multiplication, null);
@@ -132,7 +138,8 @@ public class MultiplicationsTeteContreTable extends AppCompatActivity {
             startActivity(intent);
         }else{
             Intent intent = new Intent(this, ErreurTeteContreTable.class);
-            intent.putExtra("val_erreur",val_erreur);
+            intent.putExtra(ErreurTeteContreTable.TABLE_KEY, getIntent().getIntExtra(TABLE_KEY, 0));
+            intent.putExtra(ErreurTeteContreTable.VAL_ERREUR,val_erreur);
             startActivity(intent);
         }
     }

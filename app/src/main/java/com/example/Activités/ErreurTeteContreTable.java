@@ -15,6 +15,7 @@ import java.util.ArrayList;
 
 public class ErreurTeteContreTable extends AppCompatActivity {
 
+    public static final String TABLE_KEY = "table_key";
     public static final String VAL_ERREUR = "valerreur";
 
     @Override
@@ -31,7 +32,7 @@ public class ErreurTeteContreTable extends AppCompatActivity {
     public void changeMultiplicationTeteContreTable(View view) {
         ArrayList<Integer> val_erreur= getIntent().getIntegerArrayListExtra(VAL_ERREUR);
         Intent intent = new Intent(this, MultiplicationsTeteContreTable.class);
-        intent.putExtra("val_erreur",val_erreur);
+        intent.putExtra(MultiplicationsTeteContreTable.VAL_ERREUR,val_erreur);
         startActivity(intent);
     }
 
