@@ -3,17 +3,20 @@ package com.example.Activités.model;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-import java.sql.Date;
+import java.io.Serializable;
 
 @Entity(tableName = "User")
 
-public class User {
+public class User implements Serializable {
 
     @PrimaryKey(autoGenerate = true)
     private int numProfil;
 
     private String login;
     private String password;
+
+
+
 
     public User(){}
 
@@ -41,6 +44,7 @@ public class User {
     public void setPassword(String password) {
         this.password = password;
     }
+
 
 
 

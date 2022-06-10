@@ -9,90 +9,14 @@
     android:background="#2596be">>
 
 
-    <ListView
-        android:id="@+id/listUser"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_alignParentTop="true" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Bienvenue"
-        android:gravity="center"
-        android:textSize="40dp"/>
+
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:gravity="center"
-        android:text=""
-        android:textSize="4mm" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Connexion"
-        android:gravity="center"
-        android:textSize="4mm"/>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="135dp"
-
-            android:text="Login : "
-            android:textColor="@color/black"
-            android:textSize="20dp"
-            android:layout_height="wrap_content"/>
-
-        <EditText
-            android:id="@+id/conn_login"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Mot de passe : "
-            android:textColor="@color/black"
-            android:textSize="20dp" />
-
-        <EditText
-            android:id="@+id/conn_mdp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="" />
-
-    </LinearLayout>
-
-    <Button
-        android:id="@+id/conn_valider"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Valider"
-        android:onClick="checkConnect"
-        android:layout_gravity="center"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:gravity="center"
-        android:text=""
+        android:text="Bienvenue !\nS'inscrire :"
         android:textSize="4mm" />
 
     <LinearLayout
@@ -146,5 +70,21 @@
         android:layout_height="wrap_content"
         android:text="Valider"
         android:layout_gravity="center"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="30dp"
+        android:layout_marginTop="30dp"
+        android:text="Se connecter :"/>
+
+    <ListView
+        android:id="@+id/listUser"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true" />
 
 </LinearLayout>

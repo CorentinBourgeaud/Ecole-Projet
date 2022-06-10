@@ -7,6 +7,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.Activités.model.User;
 import com.example.projetandroid.R;
 
 
@@ -21,7 +22,7 @@ public class MediaTest extends AppCompatActivity {
 
     public void play(View v){
         if(player == null){
-            player = MediaPlayer.create(this, R.raw.dog);
+            player = MediaPlayer.create(this, R.raw.song);
         }
         player.start();
         player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
