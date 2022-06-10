@@ -11,8 +11,11 @@ import android.widget.TextView;
 
 import com.example.projetandroid.R;
 
+import java.util.ArrayList;
+
 public class ErreurTeteContreTable extends AppCompatActivity {
 
+    public static final String VAL_ERREUR = "valerreur";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +25,13 @@ public class ErreurTeteContreTable extends AppCompatActivity {
 
     public void changeChoixTeteContreTable(View view) {
         Intent intent = new Intent(this, ChoixTeteContreTable.class);
+        startActivity(intent);
+    }
+
+    public void changeMultiplicationTeteContreTable(View view) {
+        ArrayList<Integer> val_erreur= getIntent().getIntegerArrayListExtra(VAL_ERREUR);
+        Intent intent = new Intent(this, MultiplicationsTeteContreTable.class);
+        intent.putExtra("val_erreur",val_erreur);
         startActivity(intent);
     }
 
