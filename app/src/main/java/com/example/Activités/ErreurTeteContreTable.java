@@ -9,6 +9,7 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.example.Activités.model.User;
 import com.example.projetandroid.R;
 
 import java.util.ArrayList;
@@ -18,10 +19,14 @@ public class ErreurTeteContreTable extends AppCompatActivity {
     public static final String TABLE_KEY = "table_key";
     public static final String VAL_ERREUR = "valerreur";
 
+    private User user;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_erreur_tete_contre_table);
+        user = ((MyApplication) getApplication()).getUser();
+
     }
 
     public void changeChoixTeteContreTable(View view) {

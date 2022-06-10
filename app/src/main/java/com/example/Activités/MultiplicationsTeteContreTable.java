@@ -13,6 +13,7 @@ import java.util.ArrayList;
 import com.example.Activités.model.Multiplication;
 import com.example.Activités.model.TableMultiplication;
 
+import com.example.Activités.model.User;
 import com.example.projetandroid.R;
 
 public class MultiplicationsTeteContreTable extends AppCompatActivity {
@@ -23,6 +24,8 @@ public class MultiplicationsTeteContreTable extends AppCompatActivity {
     // VIEW
     LinearLayout linear;
 
+    private User user;
+
     //Clé
     public static final String TABLE_KEY = "table_key";
     public static final String VAL_ERREUR = "val_erreur";
@@ -31,6 +34,8 @@ public class MultiplicationsTeteContreTable extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_multiplications_tete_contre_table);
+        user = ((MyApplication) getApplication()).getUser();
+
 
         //Récupérer les éléments graphiques
         linear = findViewById(R.id.inflate_linear);
