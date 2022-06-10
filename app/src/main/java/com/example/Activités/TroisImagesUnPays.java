@@ -45,6 +45,7 @@ public class TroisImagesUnPays extends AppCompatActivity {
     public Button btn1;
     public Button btn2;
     public Button btn3;
+    public Button btn4;
 
 
     @Override
@@ -89,17 +90,13 @@ public class TroisImagesUnPays extends AppCompatActivity {
 
 
         dejaJoue=false;
-
-        flag2=flagCorrect;
-        flag3=flagCorrect;
         flagCorrect =rand.nextInt(29);
-
-
+        flag2 = rand2.nextInt(29);
+        flag3 = rand3.nextInt(29);
 
 
         while(flagCorrect == flag2 || flag3 == flagCorrect || flag2 == flag3){
             flag2 = rand2.nextInt(29);
-
             flag3 = rand3.nextInt(29);
         }
 
@@ -109,6 +106,9 @@ public class TroisImagesUnPays extends AppCompatActivity {
 
         randChoix = rand.nextInt(3);
 
+
+        btn4 = findViewById(R.id.btnPlay);
+        btn4.setVisibility(v.INVISIBLE);
         btn1 = findViewById(R.id.btn01);
         btn1.setVisibility(v.VISIBLE);
         btn2 = findViewById(R.id.btn02);
@@ -180,14 +180,14 @@ public class TroisImagesUnPays extends AppCompatActivity {
             });
         }
         else{
-            img3.setImageResource(listDrapeau.get(flag3));
+            img.setImageResource(listDrapeau.get(flag3));
             btn1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     lose(v);
                 }
             });
-            img3.setImageResource(listDrapeau.get(flag2));
+            img2.setImageResource(listDrapeau.get(flag2));
             btn2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

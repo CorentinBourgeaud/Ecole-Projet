@@ -44,6 +44,7 @@ public class UnPaysTroisImage extends AppCompatActivity {
     public Button btn1;
     public Button btn2;
     public Button btn3;
+    public Button btn4;
 
 
     @Override
@@ -83,13 +84,12 @@ public class UnPaysTroisImage extends AppCompatActivity {
     }
 
     public void randomFlag(View v){
-        nbRound++;
         dejaJoue=false;
 
-        flag2=flagCorrect;
-        flag3=flagCorrect;
-
         flagCorrect =rand.nextInt(29);
+        flag2 = rand2.nextInt(29);;
+        flag3 = rand3.nextInt(29);
+
 
 
         while(flagCorrect == flag2 || flag3 == flagCorrect || flag2 == flag3){
@@ -99,6 +99,9 @@ public class UnPaysTroisImage extends AppCompatActivity {
 
         randChoix = rand.nextInt(3);
 
+
+        btn4 = findViewById(R.id.btnPlay1);
+        btn4.setVisibility(v.INVISIBLE);
         btn1 = findViewById(R.id.btn001);
         btn1.setVisibility(v.VISIBLE);
         btn2 = findViewById(R.id.btn002);
@@ -112,8 +115,6 @@ public class UnPaysTroisImage extends AppCompatActivity {
         texte=findViewById(R.id.consigne);
         texte.setVisibility(v.VISIBLE);
 
-        texte=findViewById(R.id.txtWin1);
-        texte.setVisibility(v.INVISIBLE);
 
         img = findViewById(R.id.drapeau);
         img.setImageResource(listDrapeau.get(flagCorrect));
@@ -191,6 +192,8 @@ public class UnPaysTroisImage extends AppCompatActivity {
                 }
             });
         }
+        nbRound++;
+
 
     }
 
@@ -209,6 +212,7 @@ public class UnPaysTroisImage extends AppCompatActivity {
             texte.setVisibility(v.VISIBLE);
             texte.setText("C'est gagné ! Bien joué.");
         }
+        randomFlag(v);
     }
 
     public void lose(View v){
@@ -221,6 +225,7 @@ public class UnPaysTroisImage extends AppCompatActivity {
             texte.setVisibility(v.VISIBLE);
             texte.setText("C'est perdu... Dommage !");
         }
+        randomFlag(v);
     }
 
 
