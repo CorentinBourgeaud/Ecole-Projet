@@ -19,7 +19,9 @@ public class CalculeMoiSiTuPeux extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calcule_moi_si_tu_peux);
-        user = (User) getIntent().getSerializableExtra("user");
+        //user = (User) getIntent().getSerializableExtra("user");
+
+        user = ((MyApplication) getApplication()).getUser();
 
     }
 

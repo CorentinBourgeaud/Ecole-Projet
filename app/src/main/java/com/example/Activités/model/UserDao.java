@@ -29,4 +29,8 @@ public interface UserDao {
     @Delete
     void delete(User users);
 
+    @Query("UPDATE User SET xp=:xp WHERE numProfil = :numProfil")
+    void update(int xp, int numProfil);
+
+
 }

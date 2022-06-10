@@ -51,8 +51,8 @@ public class ChoixGuessTheAnimal extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_choix_guess_the_animal);
-        user = (User) getIntent().getSerializableExtra("user");
-
+        //user = (User) getIntent().getSerializableExtra("user");
+        user = ((MyApplication) getApplication()).getUser();
 
         listAnimals.add(R.raw.dog); listAnimalStr.add("dog"); listPhotoAnimals.add(R.drawable.dog);
         listAnimals.add(R.raw.cat); listAnimalStr.add("cat"); listPhotoAnimals.add(R.drawable.cat);

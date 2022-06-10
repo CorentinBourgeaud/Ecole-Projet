@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -19,33 +20,41 @@ public class Accueil extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.accueil);
 
-        user = (User) getIntent().getSerializableExtra("user");
+        user = ((MyApplication) getApplication()).getUser();
+
+        //user = (User) getIntent().getSerializableExtra("user");
         Button profil = findViewById(R.id.profil);
         profil.setText("Profil de " + user.getLogin());
+
+        TextView testxp = findViewById(R.id.testXp);
+
+        int text = user.getXp();
+        String s = Integer.toString(text);
+
+        testxp.setText(s);
 
     }
 
     public void changeMaths(View view) {
         Intent intent = new Intent(this, MenuMaths.class);
-        intent.putExtra("user", user);
+        //intent.putExtra("user", user);
         startActivity(intent);
     }
 
     public void changeGeographie(View view) {
         Intent intent = new Intent(this, MenuGeographie.class);
-        intent.putExtra("user", user);
         startActivity(intent);
     }
 
     public void changeAnglais(View view) {
         Intent intent = new Intent(this, MenuAnglais.class);
-        intent.putExtra("user", user);
+        //intent.putExtra("user", user);
         startActivity(intent);
     }
 
     public void changeProfil(View view) {
         Intent intent = new Intent(this, MediaTest.class);
-        intent.putExtra("user", user);
+        //intent.putExtra("user", user);
         startActivity(intent);
     }
     

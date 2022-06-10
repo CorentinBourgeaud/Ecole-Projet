@@ -20,20 +20,21 @@ public class MenuGeographie extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_geographie);
-        user = (User) getIntent().getSerializableExtra("user");
+        user = ((MyApplication) getApplication()).getUser();
+        //user = (User) getIntent().getSerializableExtra("user");
 
     }
 
 
     public void changeTroisImagesUnPays(View v){
         Intent intent = new Intent(this, TroisImagesUnPays.class);
-        intent.putExtra("user", user);
+        //intent.putExtra("user", user);
         startActivity(intent);
     }
 
     public void changeUneImageUnPays(View v){
         Intent intent = new Intent (this, UnPaysTroisImage.class);
-        intent.putExtra("user", user);
+        //intent.putExtra("user", user);
         startActivity(intent);
     }
 

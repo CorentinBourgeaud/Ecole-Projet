@@ -45,7 +45,7 @@ public class UsersAdapter extends ArrayAdapter<User> {
 
         //
         textViewLogin.setText(user.getLogin());
-        textViewPassword.setText(user.getPassword());
+        textViewPassword.setText(user.getPrénom());
 
 
         //

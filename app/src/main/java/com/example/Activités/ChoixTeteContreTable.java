@@ -10,14 +10,19 @@ import android.widget.LinearLayout;
 import android.widget.NumberPicker;
 import android.widget.TextView;
 
+import com.example.Activités.model.User;
 import com.example.projetandroid.R;
 
 public class ChoixTeteContreTable extends AppCompatActivity {
+
+    private User user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_choix_tete_contre_table);
+
+        user = ((MyApplication) getApplication()).getUser();
 
         NumberPicker picker = findViewById(R.id.TCT_nbrPicker);
 

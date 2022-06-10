@@ -18,13 +18,12 @@ public class MenuAnglais extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_anglais);
-        user = (User) getIntent().getSerializableExtra("user");
-
+        //user = (User) getIntent().getSerializableExtra("user");
+        user = ((MyApplication) getApplication()).getUser();
     }
 
     public void changeGuessAnimal(View view){
         Intent intent = new Intent(this, GuessTheAnimal.class);
-        intent.putExtra("user", user);
         startActivity(intent);
     }
 

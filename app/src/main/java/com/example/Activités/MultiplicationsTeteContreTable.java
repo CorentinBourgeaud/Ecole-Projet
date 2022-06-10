@@ -12,9 +12,12 @@ import android.widget.TextView;
 import com.example.Activités.model.Multiplication;
 import com.example.Activités.model.TableMultiplication;
 
+import com.example.Activités.model.User;
 import com.example.projetandroid.R;
 
 public class MultiplicationsTeteContreTable extends AppCompatActivity {
+
+    private User user;
 
     // DATA
     TableMultiplication tableMultiplication;
@@ -29,6 +32,8 @@ public class MultiplicationsTeteContreTable extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_multiplications_tete_contre_table);
+
+        user = ((MyApplication) getApplication()).getUser();
 
         // 1. Initialiser les données
         tableMultiplication = new TableMultiplication(getIntent().getIntExtra(TABLE_KEY, 0), 10);

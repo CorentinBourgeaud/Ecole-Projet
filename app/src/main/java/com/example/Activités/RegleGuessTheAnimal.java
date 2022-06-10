@@ -17,7 +17,8 @@ public class RegleGuessTheAnimal extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_regle_guess_the_animal);
-        user = (User) getIntent().getSerializableExtra("user");
+        //user = (User) getIntent().getSerializableExtra("user");
+        user = ((MyApplication) getApplication()).getUser();
 
     }
 

@@ -56,7 +56,8 @@ public class UnPaysTroisImage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_une_image_trois_pays);
-        user = (User) getIntent().getSerializableExtra("user");
+        //user = (User) getIntent().getSerializableExtra("user");
+        user = ((MyApplication) getApplication()).getUser();
 
 
         listDrapeau.add(R.drawable.austria); listDrapeauStr.add("Autriche");

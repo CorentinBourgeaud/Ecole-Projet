@@ -34,10 +34,14 @@ public class Connexion extends AppCompatActivity {
 
     public User user;
 
+    public static final ArrayList<Integer> listeAvatar = new ArrayList<>();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_connexion);
+
+        listeAvatar.add(R.drawable.pikachu);
 
         mDb = DatabaseClient.getInstance(getApplicationContext());
 
@@ -53,8 +57,9 @@ public class Connexion extends AppCompatActivity {
                 User user = adapter.getItem(i);
                 Toast.makeText(Connexion.this, "Clic sur " + user.getLogin(), Toast.LENGTH_SHORT).show();
 
+                ((MyApplication) getApplication()).setUser(user);
+
                 Intent intent = new Intent(Connexion.this, Accueil.class);
-                intent.putExtra("user", user);
                 startActivity(intent);
 
             }
@@ -143,7 +148,11 @@ public class Connexion extends AppCompatActivity {
                 // creating a task
                 User user = new User();
                 user.setLogin(sLogin);
-                user.setPassword(sMdp);
+                user.setPrénom(sMdp);
+                user.setXp(0);
+                user.setXpMaths(0);
+                user.setXpAnglais(0);
+                user.setXpGeo(0);
 
                 // adding to database
                 mDb.getAppDatabase()

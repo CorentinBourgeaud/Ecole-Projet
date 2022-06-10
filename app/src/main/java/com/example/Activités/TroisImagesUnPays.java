@@ -1,5 +1,6 @@
 package com.example.Activités;
 
+import android.content.ContentValues;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -9,6 +10,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.Activités.model.DatabaseClient;
 import com.example.Activités.model.User;
 import com.example.projetandroid.R;
 
@@ -35,6 +37,8 @@ public class TroisImagesUnPays extends AppCompatActivity {
 
     public boolean dejaJoue=false;
 
+    private DatabaseClient mDb;
+
     public int randChoix;
 
 
@@ -50,12 +54,17 @@ public class TroisImagesUnPays extends AppCompatActivity {
     public Button btn3;
     public Button btn4;
 
+    public ContentValues cv = new ContentValues();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_choix_trois_images_un_pays);
-        user = (User) getIntent().getSerializableExtra("user");
+        //user = (User) getIntent().getSerializableExtra("user");
+        user = ((MyApplication) getApplication()).getUser();
+        mDb = DatabaseClient.getInstance(getApplicationContext());
+
 
 
         listDrapeau.add(R.drawable.austria); listDrapeauStr.add("Autriche");
@@ -223,6 +232,14 @@ public class TroisImagesUnPays extends AppCompatActivity {
             texte=findViewById(R.id.txtWin);
             texte.setVisibility(v.VISIBLE);
             texte.setText("C'est gagné ! Bien joué.");
+            TextView testxp = findViewById(R.id.txtWin);
+            user.setXp(user.getXp()+1);
+            //testxp.setText(user.getXp());
+            //mDb.getAppDatabase().userDao().update(user);
+            //mDb.getAppDatabase().userDao().update(user.getXp(), user.getNumProfil());
+
+            //((MyApplication) getApplication()).setUser(user);
+
             randomFlag(v);
         }
     }

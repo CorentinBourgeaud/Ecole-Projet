@@ -51,7 +51,7 @@ public class DatabaseClient {
             super.onCreate(db);
 
             //
-            db.execSQL("INSERT INTO User (numProfil, login, password) VALUES(\"0\",\"admin\", \"12345678\");");
+            db.execSQL("INSERT INTO User (numProfil, login, password, xpMaths) VALUES(\"0\",\"admin\", \"12345678\", \"1000\");");
         }
     };
 
