@@ -8,12 +8,17 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.Activités.model.User;
 import com.example.projetandroid.R;
 
 import java.util.ArrayList;
 import java.util.Random;
 
 public class UnPaysTroisImage extends AppCompatActivity {
+
+    private User user;
+
+
 
     private static final ArrayList<Integer> listDrapeau = new ArrayList<>();
     private static final ArrayList<String> listDrapeauStr = new ArrayList<>();
@@ -51,6 +56,8 @@ public class UnPaysTroisImage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_une_image_trois_pays);
+        user = (User) getIntent().getSerializableExtra("user");
+
 
         listDrapeau.add(R.drawable.austria); listDrapeauStr.add("Autriche");
         listDrapeau.add(R.drawable.belgium); listDrapeauStr.add("Belgique");

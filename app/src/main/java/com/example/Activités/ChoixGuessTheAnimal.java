@@ -10,6 +10,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.Activités.model.User;
 import com.example.projetandroid.R;
 
 import java.util.ArrayList;
@@ -42,10 +43,16 @@ public class ChoixGuessTheAnimal extends AppCompatActivity {
 
     public boolean flag = true;
 
+    private User user;
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_choix_guess_the_animal);
+        user = (User) getIntent().getSerializableExtra("user");
+
 
         listAnimals.add(R.raw.dog); listAnimalStr.add("dog"); listPhotoAnimals.add(R.drawable.dog);
         listAnimals.add(R.raw.cat); listAnimalStr.add("cat"); listPhotoAnimals.add(R.drawable.cat);

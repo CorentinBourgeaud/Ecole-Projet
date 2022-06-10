@@ -12,15 +12,11 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import com.example.Activités.model.UsersAdapter;
 import com.example.projetandroid.R;
 
 import com.example.Activités.model.DatabaseClient;
-import com.example.Activités.model.AppDatabase;
 import com.example.Activités.model.User;
-import com.example.Activités.model.UserDao;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,26 +25,40 @@ public class Connexion extends AppCompatActivity {
 
     private UsersAdapter adapter;
     private DatabaseClient mDb;
-    private ListView listUser;;
+    private ListView listUser;
+    ;
 
     private EditText editTextLogin;
     private EditText editTextMdp;
     private Button valider;
 
-
+    public User user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_connexion);
 
-        mDb=DatabaseClient.getInstance(getApplicationContext());
+        mDb = DatabaseClient.getInstance(getApplicationContext());
 
 
         listUser = findViewById(R.id.listUser);
 
-        adapter=new UsersAdapter(this, new ArrayList<User>());
+        adapter = new UsersAdapter(this, new ArrayList<User>());
         listUser.setAdapter(adapter);
+
+        listUser.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                User user = adapter.getItem(i);
+                Toast.makeText(Connexion.this, "Clic sur " + user.getLogin(), Toast.LENGTH_SHORT).show();
+
+                Intent intent = new Intent(Connexion.this, Accueil.class);
+                intent.putExtra("user", user);
+                startActivity(intent);
+
+            }
+        });
 
         mDb = DatabaseClient.getInstance(getApplicationContext());
 
@@ -61,23 +71,11 @@ public class Connexion extends AppCompatActivity {
             public void onClick(View view) {
                 saveUser();
             }
+
+
         });
     }
 
-
-
-
-
-
-    public void checkConnect(View view){
-        EditText loginView = findViewById(R.id.conn_login);
-        String login = loginView.getText().toString();
-        Intent intent = new Intent(Connexion.this, Accueil.class);
-        intent.putExtra("nom", login);
-        startActivity(intent);
-
-
-    }
 
     private void getUsers() {
         ///////////////////////
@@ -163,23 +161,14 @@ public class Connexion extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "Inscription sauvegardée.<", Toast.LENGTH_LONG).show();
 
             }
+
         }
         SaveTask st = new SaveTask();
         st.execute();
+        Intent intent = new Intent(Connexion.this, Connexion.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
 
     }
 
-/*
-
-    listUser.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
-            // Récupération de la tâche cliquée à l'aide de l'adapter
-            User user = adapter.getItem(position);
-
-            // Message
-            Toast.makeText(this, "Click : " + user.getLogin(), Toast.LENGTH_SHORT).show();
-        }
-    });*/
 }
-
