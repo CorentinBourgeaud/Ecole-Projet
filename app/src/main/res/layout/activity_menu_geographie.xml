@@ -35,7 +35,7 @@
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="1 image -> 1 pays"
+        android:text="1 image -> 3 pays"
         android:onClick="changeUneImageUnPays"/>
 
     <TextView

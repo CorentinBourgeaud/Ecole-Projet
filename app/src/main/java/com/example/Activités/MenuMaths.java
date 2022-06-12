@@ -21,10 +21,7 @@ public class MenuMaths extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void changeCalculeMoiSiTuPeux(View view) {
-        Intent intent = new Intent(this, CalculeMoiSiTuPeux.class);
-        startActivity(intent);
-    }
+
 
     public void retour (View view){
         super.finish();

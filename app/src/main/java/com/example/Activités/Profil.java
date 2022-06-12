@@ -1,6 +1,7 @@
 package com.example.Activités;
 
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -9,6 +10,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.Activités.model.DatabaseClient;
 import com.example.Activités.model.User;
 import com.example.projetandroid.R;
 
@@ -22,9 +24,14 @@ public class Profil extends AppCompatActivity {
     private TextView text;
     private ImageView img;
 
+    private DatabaseClient mDb;
+
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profil);
+
+        mDb = DatabaseClient.getInstance(getApplicationContext());
+
         user = ((MyApplication) getApplication()).getUser();
         listAvatar = ((MyApplication) getApplication()).getListAvatar();
 
@@ -60,12 +67,16 @@ public class Profil extends AppCompatActivity {
     public void deconnexion(View v){
         Intent intent = new Intent(Profil.this, Connexion.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        ((MyApplication) getApplication()).setUser(null);
         Toast.makeText(getApplicationContext(), "Déconnexion réussie.", Toast.LENGTH_LONG).show();
         startActivity(intent);
     }
 
+
     public void retour(View v){
+
         super.finish();
+
     }
 
 

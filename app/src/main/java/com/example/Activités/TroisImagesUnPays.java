@@ -84,11 +84,14 @@ public class TroisImagesUnPays extends AppCompatActivity {
         flag2 = rand2.nextInt(29);
         flag3 = rand3.nextInt(29);
 
+        //permet de ne pas avoir deux fois le même drapeau dans la ligne.
 
         while(flagCorrect == flag2 || flag3 == flagCorrect || flag2 == flag3){
             flag2 = rand2.nextInt(29);
             flag3 = rand3.nextInt(29);
         }
+
+        //mets à jour le nombre de parties gagnées
 
         texte=findViewById(R.id.textPlay1);
         texte.setText("Nombre de rounds joués : "+nbRound);
@@ -96,6 +99,7 @@ public class TroisImagesUnPays extends AppCompatActivity {
 
         randChoix = rand.nextInt(3);
 
+        //rend le bouton jouer invisible, et les boutons de jeu visible
 
         btn4 = findViewById(R.id.btnPlay);
         btn4.setVisibility(v.INVISIBLE);
@@ -105,6 +109,8 @@ public class TroisImagesUnPays extends AppCompatActivity {
         btn2.setVisibility(v.VISIBLE);
         btn3 = findViewById(R.id.btn03);
         btn3.setVisibility(v.VISIBLE);
+
+        //fait apparaître les questions et la consigne
 
         texte=findViewById(R.id.nomPays);
         texte.setVisibility(v.VISIBLE);
@@ -122,6 +128,8 @@ public class TroisImagesUnPays extends AppCompatActivity {
         img3 = findViewById(R.id.img3);
         img3.setVisibility(v.VISIBLE);
 
+
+        // La séquence de if permet ici de choisir aléatoirement quelle case à cocher sera la bonne réponse.
 
         if(randChoix==1) {
             img.setImageResource(listDrapeau.get(flagCorrect));
@@ -209,14 +217,7 @@ public class TroisImagesUnPays extends AppCompatActivity {
             texte.setVisibility(v.VISIBLE);
             texte.setText("C'est gagné ! Bien joué.");
 
-
-
-           //mDb.getAppDatabase().userDao().update(user);
-
-            //mDb.getAppDatabase().userDao().update(user.getXp(), user.getNumProfil());
-
-            //((MyApplication) getApplication()).setUser(user);
-
+            //lance la tache asynchrone pour la gestion de l'expérience
             updateUser();
 
             randomFlag(v);
@@ -248,7 +249,7 @@ public class TroisImagesUnPays extends AppCompatActivity {
 
                 user.setXp(user.getXp()+1);
                 user.setXpGeo(user.getXp()+1);
-
+                //appelle la DAO de user pour mettre à jour l'utilisateur courant
                 mDb.getAppDatabase()
                        .userDao()
                        .update(user);

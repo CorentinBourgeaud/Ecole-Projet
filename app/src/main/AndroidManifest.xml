@@ -5,7 +5,7 @@
     <application
         android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="L'école des lumières"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjetAndroid"
@@ -24,9 +24,6 @@
             android:exported="true" />
         <activity
             android:name="com.example.Activités.ChoixTeteContreTable"
-            android:exported="true" />
-        <activity
-            android:name="com.example.Activités.CalculeMoiSiTuPeux"
             android:exported="true" />
         <activity
             android:name="com.example.Activités.TeteContreTable"

@@ -25,15 +25,18 @@ public class ReussiteTeteContreTable extends AppCompatActivity {
         setContentView(R.layout.activity_reussite_tete_contre_table);
         user = ((MyApplication) getApplication()).getUser();
         mDb = DatabaseClient.getInstance(getApplicationContext());
+        updateUser();
     }
 
     public void changeAcceuil(View view) {
         Intent intent = new Intent(this, Accueil.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
     }
 
     public void changeChoixTeteContreTable(View view) {
         Intent intent = new Intent(this, ChoixTeteContreTable.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
     }
 

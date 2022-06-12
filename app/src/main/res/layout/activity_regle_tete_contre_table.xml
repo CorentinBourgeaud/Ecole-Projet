@@ -22,7 +22,8 @@
         android:layout_width="match_parent"
         android:layout_height="502dp"
         android:gravity="center"
-        android:text="@string/regle_tete_contre_table" />
+        android:textSize="30dp"
+        android:text="Mathématiques : Remplis toutes les tables de multiplication sans te tromper. Attention : la moindre erreur te fait perdre l’exercice !" />
 
     <Button
         android:layout_width="300dp"

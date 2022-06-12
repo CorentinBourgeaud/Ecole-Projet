@@ -31,12 +31,6 @@
         android:layout_width="match_parent"
         android:layout_height="30dp" />
 
-    <Button
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Calcule moi si tu peux !"
-        android:onClick="changeCalculeMoiSiTuPeux"/>
 
     <TextView
         android:layout_width="wrap_content"

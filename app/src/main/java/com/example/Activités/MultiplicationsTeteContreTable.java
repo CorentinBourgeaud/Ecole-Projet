@@ -115,6 +115,7 @@ public class MultiplicationsTeteContreTable extends AppCompatActivity {
         ArrayList<Integer> val_erreur = new ArrayList<Integer>();
 
         int erreur = 0;
+        int correct = 0;
 
         //récupère le chiffre de la table
         int table = tableMultiplication.getNombre();
@@ -133,12 +134,15 @@ public class MultiplicationsTeteContreTable extends AppCompatActivity {
                     val_erreur.add(i);
                     erreur++;
                 }
+                else{
+                    correct++;
+                }
             }
             else{
                 resultat.setError("Rentrez un entier");
             }
         }
-        if (val_erreur.isEmpty()){
+        if (val_erreur.isEmpty() && correct ==10){
             Intent intent = new Intent(this, ReussiteTeteContreTable.class);
             intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent);

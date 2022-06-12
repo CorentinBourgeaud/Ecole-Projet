@@ -21,7 +21,10 @@
         android:layout_width="match_parent"
         android:layout_height="580dp"
         android:gravity="center"
-        android:text="@string/regle_tete_contre_table"/>
+        android:textSize="30dp"
+        android:text="You’re about to hear an animal making noise: guess what animal it is, and win the game!
+\n\nTu vas entendre des bruits d’animaux. Devine de quel animal il s’agit pour remporter la partie !
+"/>
 
 
 

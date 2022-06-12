@@ -63,8 +63,7 @@ public class UnPaysTroisImage extends AppCompatActivity {
         user = ((MyApplication) getApplication()).getUser();
         mDb = DatabaseClient.getInstance(getApplicationContext());
 
-
-
+        //va chercher dans la variable globale les tableaux contenant les Resource Id des images, ainsi que les string qui vont avec
         listDrapeau = ((MyApplication) getApplication()).getListDrapeau();
         listDrapeauStr = ((MyApplication) getApplication()).getListDrapeauStr();
 
@@ -86,7 +85,7 @@ public class UnPaysTroisImage extends AppCompatActivity {
 
         randChoix = rand.nextInt(3);
 
-
+        //rend les boutons de jeu visible
         btn4 = findViewById(R.id.btnPlay1);
         btn4.setVisibility(v.INVISIBLE);
         btn1 = findViewById(R.id.btn001);
@@ -102,14 +101,14 @@ public class UnPaysTroisImage extends AppCompatActivity {
         texte=findViewById(R.id.consigne);
         texte.setVisibility(v.VISIBLE);
 
-
+        //rend le drapeau consigne visible avec la nouvelle valeur
         img = findViewById(R.id.drapeau);
         img.setImageResource(listDrapeau.get(flagCorrect));
         img.setVisibility(v.VISIBLE);
 
 
 
-
+        //Choisis aléatoirement quelle réponse est la bonne
         if(randChoix==1) {
             btn1.setText(listDrapeauStr.get(flagCorrect));
             btn1.setOnClickListener(new View.OnClickListener() {
@@ -199,6 +198,7 @@ public class UnPaysTroisImage extends AppCompatActivity {
             texte.setVisibility(v.VISIBLE);
             texte.setText("C'est gagné ! Bien joué.");
         }
+        //Appelle la dao pour mettre à jour l'utilisateur
         updateUser();
         randomFlag(v);
     }

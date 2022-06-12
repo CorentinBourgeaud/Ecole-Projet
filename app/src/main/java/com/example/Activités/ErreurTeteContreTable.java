@@ -31,14 +31,13 @@ public class ErreurTeteContreTable extends AppCompatActivity {
 
     public void changeChoixTeteContreTable(View view) {
         Intent intent = new Intent(this, ChoixTeteContreTable.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+
         startActivity(intent);
     }
 
-    public void changeMultiplicationTeteContreTable(View view) {
-        ArrayList<Integer> val_erreur= getIntent().getIntegerArrayListExtra(VAL_ERREUR);
-        Intent intent = new Intent(this, MultiplicationsTeteContreTable.class);
-        intent.putExtra(MultiplicationsTeteContreTable.VAL_ERREUR,val_erreur);
-        startActivity(intent);
+    public void retry(View view) {
+        super.finish();
     }
 
     public void retour (View view){
