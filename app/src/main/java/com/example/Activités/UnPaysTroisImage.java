@@ -1,5 +1,6 @@
 package com.example.Activités;
 
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -8,6 +9,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.Activités.model.DatabaseClient;
 import com.example.Activités.model.User;
 import com.example.projetandroid.R;
 
@@ -38,6 +40,8 @@ public class UnPaysTroisImage extends AppCompatActivity {
 
     public int randChoix;
 
+    private DatabaseClient mDb;
+
 
     public ImageView img;
     public ImageView img2;
@@ -56,8 +60,9 @@ public class UnPaysTroisImage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_une_image_trois_pays);
-        //user = (User) getIntent().getSerializableExtra("user");
         user = ((MyApplication) getApplication()).getUser();
+        mDb = DatabaseClient.getInstance(getApplicationContext());
+
 
 
         listDrapeau = ((MyApplication) getApplication()).getListDrapeau();
@@ -194,6 +199,7 @@ public class UnPaysTroisImage extends AppCompatActivity {
             texte.setVisibility(v.VISIBLE);
             texte.setText("C'est gagné ! Bien joué.");
         }
+        updateUser();
         randomFlag(v);
     }
 
@@ -208,6 +214,35 @@ public class UnPaysTroisImage extends AppCompatActivity {
             texte.setText("C'est perdu... Dommage !");
         }
         randomFlag(v);
+    }
+
+    private void updateUser(){
+
+        class GetUser extends AsyncTask<Void, Void, User> {
+
+            @Override
+            protected User doInBackground(Void... voids){
+                user = ((MyApplication) getApplication()).getUser();
+
+                user.setXp(user.getXp()+1);
+                user.setXpGeo(user.getXp()+1);
+
+                mDb.getAppDatabase()
+                        .userDao()
+                        .update(user);
+
+                return user;
+            }
+
+            @Override
+            protected void onPostExecute(User user) {
+                super.onPostExecute(user);
+            }
+        }
+        GetUser gu = new GetUser();
+        gu.execute();
+
+
     }
 
 

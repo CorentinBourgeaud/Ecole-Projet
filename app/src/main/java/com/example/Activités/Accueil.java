@@ -26,13 +26,6 @@ public class Accueil extends AppCompatActivity {
         Button profil = findViewById(R.id.profil);
         profil.setText("Profil de " + user.getLogin());
 
-        TextView testxp = findViewById(R.id.testXp);
-
-        int text = user.getXp();
-        String s = Integer.toString(text);
-
-        testxp.setText(s);
-
     }
 
     public void changeMaths(View view) {

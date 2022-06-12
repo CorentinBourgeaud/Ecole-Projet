@@ -1,5 +1,6 @@
 package com.example.Activités;
 
+import android.content.AsyncQueryHandler;
 import android.content.ContentValues;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -8,6 +9,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -207,14 +209,15 @@ public class TroisImagesUnPays extends AppCompatActivity {
             texte.setVisibility(v.VISIBLE);
             texte.setText("C'est gagné ! Bien joué.");
 
-            user.setXp(user.getXp()+1);
 
 
            //mDb.getAppDatabase().userDao().update(user);
 
             //mDb.getAppDatabase().userDao().update(user.getXp(), user.getNumProfil());
 
-            ((MyApplication) getApplication()).setUser(user);
+            //((MyApplication) getApplication()).setUser(user);
+
+            updateUser();
 
             randomFlag(v);
         }
@@ -231,6 +234,37 @@ public class TroisImagesUnPays extends AppCompatActivity {
             texte.setText("C'est perdu... Dommage !");
             randomFlag(v);
         }
+    }
+
+
+
+    private void updateUser(){
+
+        class GetUser extends AsyncTask<Void, Void, User>{
+
+            @Override
+            protected User doInBackground(Void... voids){
+                user = ((MyApplication) getApplication()).getUser();
+
+                user.setXp(user.getXp()+1);
+                user.setXpGeo(user.getXp()+1);
+
+                mDb.getAppDatabase()
+                       .userDao()
+                       .update(user);
+
+                return user;
+            }
+
+            @Override
+            protected void onPostExecute(User user) {
+                super.onPostExecute(user);
+            }
+        }
+        GetUser gu = new GetUser();
+        gu.execute();
+
+
     }
 
 }

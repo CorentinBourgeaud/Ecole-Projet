@@ -148,7 +148,7 @@ public class Connexion extends AppCompatActivity {
                 User user = new User();
                 user.setLogin(sLogin);
                 user.setPrénom(sMdp);
-                user.setXp(10);
+                user.setXp(0);
                 user.setXpMaths(0);
                 user.setXpAnglais(0);
                 user.setXpGeo(0);

@@ -38,13 +38,13 @@ public class Profil extends AppCompatActivity {
 
 
         text = findViewById(R.id.nvGeneral);
-        text.setText(text.getText() + " " + user.getXp());
+        text.setText(text.getText() + " " + (int)user.getXp()/50);
         text = findViewById(R.id.nvMaths);
-        text.setText(text.getText() + " " + user.getXpMaths());
+        text.setText(text.getText() + " " + (int)user.getXpMaths()/25);
         text = findViewById(R.id.nvGeo);
-        text.setText(text.getText() + " " + user.getXpGeo());
+        text.setText(text.getText() + " " + (int)user.getXpGeo()/25);
         text = findViewById(R.id.nvAnglais);
-        text.setText(text.getText() + " " + user.getXpAnglais());
+        text.setText(text.getText() + " " + (int)user.getXpAnglais()/3);
 
         img = findViewById(R.id.avatar);
         img.setImageResource(listAvatar.get(user.getAvatar()));

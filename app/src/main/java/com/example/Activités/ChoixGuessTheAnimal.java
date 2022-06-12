@@ -1,6 +1,7 @@
 package com.example.Activités;
 
 import android.media.MediaPlayer;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -10,6 +11,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.Activités.model.DatabaseClient;
 import com.example.Activités.model.User;
 import com.example.projetandroid.R;
 
@@ -26,6 +28,8 @@ public class ChoixGuessTheAnimal extends AppCompatActivity {
     public static  ArrayList<Integer> listAnimals = new ArrayList<>();
     public static  ArrayList<String> listAnimalStr = new ArrayList<>();
     public static  ArrayList<Integer> listPhotoAnimals = new ArrayList<>();
+
+    private DatabaseClient mDb;
 
     private int round = 0;
     private int roundWin = 0;
@@ -57,6 +61,8 @@ public class ChoixGuessTheAnimal extends AppCompatActivity {
         listAnimals = ((MyApplication) getApplication()).getListAnimals();
         listAnimalStr = ((MyApplication) getApplication()).getListAnimalStr();
         listPhotoAnimals = ((MyApplication) getApplication()).getListPhotoAnimals();
+
+        mDb = DatabaseClient.getInstance(getApplicationContext());
 
     }
 
@@ -199,6 +205,7 @@ public class ChoixGuessTheAnimal extends AppCompatActivity {
             textPlay = findViewById(R.id.textPlay);
             textPlay.setText("Nombre de rounds joués : " + round);
             flag = false;
+            updateUser();
         }
 
 
@@ -223,7 +230,35 @@ public class ChoixGuessTheAnimal extends AppCompatActivity {
 
     }
 
+    private void updateUser(){
 
+        class GetUser extends AsyncTask<Void, Void, User> {
+
+            @Override
+            protected User doInBackground(Void... voids){
+                user = ((MyApplication) getApplication()).getUser();
+
+                user.setXp(user.getXp()+1);
+                user.setXpAnglais(user.getXpAnglais()+1);
+
+
+                mDb.getAppDatabase()
+                        .userDao()
+                        .update(user);
+
+                return user;
+            }
+
+            @Override
+            protected void onPostExecute(User user) {
+                super.onPostExecute(user);
+            }
+        }
+        GetUser gu = new GetUser();
+        gu.execute();
+
+
+    }
 
 
 
