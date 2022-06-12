@@ -49,9 +49,7 @@ public class DatabaseClient {
         @Override
         public void onCreate(@NonNull SupportSQLiteDatabase db) {
             super.onCreate(db);
-
             //
-            db.execSQL("INSERT INTO User (numProfil, login, password, xpMaths) VALUES(\"0\",\"admin\", \"12345678\", \"1000\");");
         }
     };
 

@@ -44,10 +44,10 @@ public class Profil extends AppCompatActivity {
         text = findViewById(R.id.nvGeo);
         text.setText(text.getText() + " " + (int)user.getXpGeo()/25);
         text = findViewById(R.id.nvAnglais);
-        text.setText(text.getText() + " " + (int)user.getXpAnglais()/3);
+        text.setText(text.getText() + " " + (int)user.getXpAnglais()/25);
 
         img = findViewById(R.id.avatar);
-        img.setImageResource(listAvatar.get(user.getAvatar()));
+        img.setImageResource(listAvatar.get(user.getNumProfil()));
 
 
 
@@ -56,17 +56,16 @@ public class Profil extends AppCompatActivity {
 
     }
 
-    public void changeAvatar(View v){
-
-        Intent intent = new Intent(Profil.this, ChoixAvatar.class);
-        startActivity(intent);
-    }
 
     public void deconnexion(View v){
         Intent intent = new Intent(Profil.this, Connexion.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         Toast.makeText(getApplicationContext(), "Déconnexion réussie.", Toast.LENGTH_LONG).show();
         startActivity(intent);
+    }
+
+    public void retour(View v){
+        super.finish();
     }
 
 

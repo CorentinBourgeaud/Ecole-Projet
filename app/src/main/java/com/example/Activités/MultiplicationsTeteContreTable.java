@@ -140,6 +140,7 @@ public class MultiplicationsTeteContreTable extends AppCompatActivity {
         }
         if (val_erreur.isEmpty()){
             Intent intent = new Intent(this, ReussiteTeteContreTable.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent);
         }else{
             Intent intent = new Intent(this, ErreurTeteContreTable.class);

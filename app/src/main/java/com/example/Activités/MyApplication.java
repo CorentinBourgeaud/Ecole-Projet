@@ -133,8 +133,17 @@ public class MyApplication extends Application implements Serializable {
     }
 
     public ArrayList<Integer> getListAvatar(){
+
         listAvatar.add(R.drawable.pikachu);
         listAvatar.add(R.drawable.link);
+        listAvatar.add(R.drawable.rondoudou);
+        listAvatar.add(R.drawable.pikachu);
+        listAvatar.add(R.drawable.link);
+        listAvatar.add(R.drawable.rondoudou);
+        listAvatar.add(R.drawable.pikachu);
+        listAvatar.add(R.drawable.link);
+        listAvatar.add(R.drawable.rondoudou);
+
 
         return listAvatar;
     }

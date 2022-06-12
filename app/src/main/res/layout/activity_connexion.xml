@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.example.Activités.Connexion"
-    android:background="#2596be">>
+    android:background="@drawable/bg"
+    >
 
 
 
@@ -27,10 +28,10 @@
         <TextView
             android:layout_width="135dp"
 
+            android:layout_height="wrap_content"
             android:text="Login : "
             android:textColor="@color/black"
-            android:textSize="20dp"
-            android:layout_height="wrap_content"/>
+            android:textSize="20dp" />
 
         <EditText
             android:id="@+id/conn_login_inscription"
@@ -47,9 +48,9 @@
         android:orientation="horizontal">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="135dp"
             android:layout_height="wrap_content"
-            android:text="Mot de passe : "
+            android:text="Prénom : "
             android:textColor="@color/black"
             android:textSize="20dp" />
 

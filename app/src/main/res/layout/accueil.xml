@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.example.Activités.Accueil"
-    android:background="#2596be">
+    android:background="@drawable/bg">
 
 
     <TextView

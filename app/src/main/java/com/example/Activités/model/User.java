@@ -24,8 +24,7 @@ public class User implements Serializable {
     private int xpAnglais;
     @ColumnInfo
     private int xpMaths;
-    @ColumnInfo
-    private int avatar;
+
 
     public User(){}
 
@@ -33,11 +32,13 @@ public class User implements Serializable {
         return this;
     }
 
+
     public void setNumProfil(int numProfil) {
         this.numProfil = numProfil;
     }
 
     public int getNumProfil() { return numProfil; }
+
 
     public String getLogin(){
         return login;
@@ -55,6 +56,7 @@ public class User implements Serializable {
         this.prénom = prénom;
     }
 
+
     public int getXp() {
         return xp;
     }
@@ -62,6 +64,7 @@ public class User implements Serializable {
     public void setXp(int xp) {
         this.xp = xp;
     }
+
 
     public int getXpGeo() {
         return xpGeo;
@@ -71,6 +74,7 @@ public class User implements Serializable {
         this.xpGeo = xpGeo;
     }
 
+
     public int getXpAnglais() {
         return xpAnglais;
     }
@@ -78,6 +82,7 @@ public class User implements Serializable {
     public void setXpAnglais(int xpAnglais) {
         this.xpAnglais = xpAnglais;
     }
+
 
     public int getXpMaths() {
         return xpMaths;
@@ -87,11 +92,4 @@ public class User implements Serializable {
         this.xpMaths = xpMaths;
     }
 
-    public int getAvatar(){
-        return avatar;
-    }
-
-    public void setAvatar(int avatar){
-        this.avatar = avatar;
-    }
 }

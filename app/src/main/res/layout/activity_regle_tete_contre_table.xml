@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context="com.example.Activités.RegleTeteContreTable"
     android:orientation="vertical"
-    android:background="#2596be">
+    android:background="@drawable/bg">
 
     <TextView
         android:layout_width="425dp"

@@ -148,11 +148,10 @@ public class Connexion extends AppCompatActivity {
                 User user = new User();
                 user.setLogin(sLogin);
                 user.setPrénom(sMdp);
-                user.setXp(0);
-                user.setXpMaths(0);
-                user.setXpAnglais(0);
-                user.setXpGeo(0);
-                user.setAvatar(0);
+                user.setXp(1);
+                user.setXpMaths(1);
+                user.setXpAnglais(1);
+                user.setXpGeo(1);
 
                 // adding to database
                 mDb.getAppDatabase()

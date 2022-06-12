@@ -58,8 +58,6 @@
         <activity
             android:name="com.example.Activités.UnPaysTroisImage"
             android:exported="true" />
-        <activity android:name="com.example.Activités.ChoixAvatar"
-            android:exported="true"/>
         <activity
             android:name="com.example.Activités.Connexion"
             android:exported="true">
