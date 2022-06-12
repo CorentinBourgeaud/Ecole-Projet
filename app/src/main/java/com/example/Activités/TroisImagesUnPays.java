@@ -1,6 +1,7 @@
 package com.example.Activités;
 
 import android.content.ContentValues;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -15,6 +16,7 @@ import com.example.Activités.model.User;
 import com.example.projetandroid.R;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 public class TroisImagesUnPays extends AppCompatActivity {
@@ -38,7 +40,6 @@ public class TroisImagesUnPays extends AppCompatActivity {
     public boolean dejaJoue=false;
 
     private DatabaseClient mDb;
-
     public int randChoix;
 
 
@@ -64,6 +65,7 @@ public class TroisImagesUnPays extends AppCompatActivity {
         //user = (User) getIntent().getSerializableExtra("user");
         user = ((MyApplication) getApplication()).getUser();
         mDb = DatabaseClient.getInstance(getApplicationContext());
+
 
 
         listDrapeau = ((MyApplication) getApplication()).getListDrapeau();
@@ -208,7 +210,7 @@ public class TroisImagesUnPays extends AppCompatActivity {
             user.setXp(user.getXp()+1);
 
 
-            //mDb.getAppDatabase().userDao().update(user);
+           //mDb.getAppDatabase().userDao().update(user);
 
             //mDb.getAppDatabase().userDao().update(user.getXp(), user.getNumProfil());
 
@@ -230,6 +232,5 @@ public class TroisImagesUnPays extends AppCompatActivity {
             randomFlag(v);
         }
     }
-
 
 }
